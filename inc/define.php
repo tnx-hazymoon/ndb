@@ -1,13 +1,13 @@
 <?php
-// ¥Ç¡¼¥¿¥Ù¡¼¥¹¾ðÊó
-$ndbDB['dir']  = "¢¨DB¥Õ¥¡¥¤¥ë¤ò¼ýÍÆ¤¹¤ë¥Õ¥©¥ë¥ÀÌ¾¡ÊËöÈø¤Ë'/'¤ÏÉÕ¤±¤Ê¤¤¡Ë";
-$ndbDB['file'] = $ndbDB['dir'] . "/" . "¢¨DB¥Õ¥¡¥¤¥ëÌ¾";
+// ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æƒ…å ±
+$ndbDB['dir']  = "â€»DBãƒ•ã‚¡ã‚¤ãƒ«ã‚’åŽå®¹ã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€åï¼ˆæœ«å°¾ã«'/'ã¯ä»˜ã‘ãªã„ï¼‰";
+$ndbDB['file'] = $ndbDB['dir'] . "/" . "â€»DBãƒ•ã‚¡ã‚¤ãƒ«å";
 $ndbDB['tbl']  = "nova_ax_table";
 
-// Ç§¾ÚÍÑ¥Ñ¥¹¥ï¡¼¥É
-$root_pass = "rootpassword";	// ´ÉÍý¼ÔÍÑ¥Ñ¥¹¥ï¡¼¥É
+// èªè¨¼ç”¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+$root_pass = "rootpassword";	// ç®¡ç†è€…ç”¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 
-// ÊÔ½¸ÍÑJavaScript
+// ç·¨é›†ç”¨JavaScript
 $jscrPath['TNX'] = "./btd_form.js";
 $jscrType = "TNX";
 
@@ -21,69 +21,69 @@ $displayTableWidth = 860;
 $inputTableWidth = 860;
 $listMaxPerPage = 100;
 $abstractMaxPerPage = 10;
-$HomePage = "¢¨¿Æ¥µ¥¤¥È¤ÎURL";
+$HomePage = "â€»è¦ªã‚µã‚¤ãƒˆã®URL";
 $defaultSearchCategory = "cast";
 
-// DBÀÜÂ³ID
+// DBæŽ¥ç¶šID
 $dbm = 0;
 
-// FPDF¥é¥¤¥Ö¥é¥ê
-$fpdfDir = "¢¨FPDF¥é¥¤¥Ö¥é¥ê¤Î¥¤¥ó¥¹¥È¡¼¥ë¥Õ¥©¥ë¥À¡ÊËöÈø¤Ë'/'¤ÏÉÕ¤±¤Ê¤¤¡Ë";
+// FPDFãƒ©ã‚¤ãƒ–ãƒ©ãƒª
+$fpdfDir = "â€»FPDFãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ï¼ˆæœ«å°¾ã«'/'ã¯ä»˜ã‘ãªã„ï¼‰";
 
 
-// ¥¹¥¿¥¤¥ë
+// ã‚¹ã‚¿ã‚¤ãƒ«
 $c = 0;
-$styleList[$c++] = array( 'no' =>   0, 'name' => "¥«¥Ö¥­",       'alf' => "kabuki"     , 'knj' => "²ÎÉñ´ì", 'pow' => array( 0,3, 3,5, 2,4, 2,4 ) );
-$styleList[$c++] = array( 'no' =>   1, 'name' => "¥Ð¥µ¥é",       'alf' => "vasara"     , 'knj' => "ÇÌÕ°Íå", 'pow' => array( 3,5, 2,5, 1,3, 1,3 ) );
-$styleList[$c++] = array( 'no' =>   2, 'name' => "¥¿¥¿¥é",       'alf' => "tatara"     , 'knj' => "Æ§°È"  , 'pow' => array( 3,5, 1,3, 1,3, 2,5 ) );
-$styleList[$c++] = array( 'no' =>   3, 'name' => "¥ß¥¹¥È¥ì¥¹",   'alf' => "mistress"   , 'knj' => "Éñµ®¿Í", 'pow' => array( 1,4, 3,5, 1,2, 2,5 ) );
-$styleList[$c++] = array( 'no' =>   4, 'name' => "¥«¥Ö¥È",       'alf' => "kabuto"     , 'knj' => "³õ"    , 'pow' => array( 2,4, 1,4, 3,5, 1,3 ) );
-$styleList[$c++] = array( 'no' =>   5, 'name' => "¥«¥ê¥¹¥Þ",     'alf' => "karisma"    , 'knj' => "¼íËâ"  , 'pow' => array( 1,3, 3,5, 0,3, 3,5 ) );
-$styleList[$c++] = array( 'no' =>   6, 'name' => "¥Þ¥Í¥­¥ó",     'alf' => "manikin"    , 'knj' => "¿¿»÷¶Þ", 'pow' => array( 1,3, 3,5, 2,5, 1,3 ) );
-$styleList[$c++] = array( 'no' =>   7, 'name' => "¥«¥¼",         'alf' => "kaze"       , 'knj' => "É÷"    , 'pow' => array( 2,5, 1,3, 2,4, 2,4 ) );
-$styleList[$c++] = array( 'no' =>   8, 'name' => "¥Õ¥§¥¤¥È",     'alf' => "fate"       , 'knj' => "Ê¿°ÒÅÌ", 'pow' => array( 2,5, 2,5, 1,3, 2,3 ) );
-$styleList[$c++] = array( 'no' =>   9, 'name' => "¥¯¥í¥Þ¥¯",     'alf' => "kuro-maku"  , 'knj' => "¹õËë"  , 'pow' => array( 1,3, 2,5, 1,3, 3,5 ) );
-$styleList[$c++] = array( 'no' =>  10, 'name' => "¥¨¥°¥¼¥¯",     'alf' => "exek."      , 'knj' => "±×À¤¶é", 'pow' => array( 2,5, 1,3, 1,3, 3,5 ) );
-$styleList[$c++] = array( 'no' =>  11, 'name' => "¥«¥¿¥Ê",       'alf' => "katana"     , 'knj' => "Åá"    , 'pow' => array( 2,4, 0,4, 3,5, 2,3 ) );
-$styleList[$c++] = array( 'no' =>  12, 'name' => "¥¯¥°¥Ä",       'alf' => "kugutsu"    , 'knj' => "ÐúÑ´"  , 'pow' => array( 3,5, 0,4, 3,5, 1,2 ) );
-$styleList[$c++] = array( 'no' =>  13, 'name' => "¥«¥²",         'alf' => "kage"       , 'knj' => "±Æ"    , 'pow' => array( 3,4, 0,5, 2,4, 2,3 ) );
-$styleList[$c++] = array( 'no' =>  14, 'name' => "¥Á¥ã¥¯¥é",     'alf' => "chakra"     , 'knj' => "¼Ö°È"  , 'pow' => array( 2,5, 2,5, 3,5, 0,1 ) );
-$styleList[$c++] = array( 'no' =>  15, 'name' => "¥ì¥Ã¥¬¡¼",     'alf' => "legger"     , 'knj' => "Îö²ç"  , 'pow' => array( 2,4, 2,4, 2,4, 1,4 ) );
-$styleList[$c++] = array( 'no' =>  16, 'name' => "¥«¥Ö¥È¥ï¥ê",   'alf' => "kabuto-wari", 'knj' => "³õ³ä"  , 'pow' => array( 2,4, 0,4, 2,3, 3,5 ) );
-$styleList[$c++] = array( 'no' =>  17, 'name' => "¥Ï¥¤¥é¥ó¥À¡¼", 'alf' => "hilander"   , 'knj' => "ÇÒÍðÂÌ", 'pow' => array( 2,5, 2,5, 0,1, 3,5 ) );
-$styleList[$c++] = array( 'no' =>  18, 'name' => "¥Þ¥ä¥«¥·",     'alf' => "mayakashi"  , 'knj' => "ËàÌíê¸", 'pow' => array( 3,5, 3,5, 0,2, 1,4 ) );
-$styleList[$c++] = array( 'no' =>  19, 'name' => "¥È¡¼¥­¡¼",     'alf' => "talkie"     , 'knj' => "Åê´îµï", 'pow' => array( 2,5, 3,5, 1,3, 1,3 ) );
-$styleList[$c++] = array( 'no' =>  20, 'name' => "¥¤¥Ì",         'alf' => "inu"        , 'knj' => "¸¤"    , 'pow' => array( 3,5, 1,3, 2,5, 1,3 ) );
-$styleList[$c++] = array( 'no' =>  21, 'name' => "¥Ë¥å¡¼¥í",     'alf' => "neuro"      , 'knj' => "¿·À¸Ï©", 'pow' => array( 3,5, 2,5, 0,1, 2,5 ) );
+$styleList[$c++] = array( 'no' =>   0, 'name' => "ã‚«ãƒ–ã‚­",       'alf' => "kabuki"     , 'knj' => "æ­Œèˆžä¼Ž", 'pow' => array( 0,3, 3,5, 2,4, 2,4 ) );
+$styleList[$c++] = array( 'no' =>   1, 'name' => "ãƒã‚µãƒ©",       'alf' => "vasara"     , 'knj' => "å©†å¨‘ç¾…", 'pow' => array( 3,5, 2,5, 1,3, 1,3 ) );
+$styleList[$c++] = array( 'no' =>   2, 'name' => "ã‚¿ã‚¿ãƒ©",       'alf' => "tatara"     , 'knj' => "è¸éž"  , 'pow' => array( 3,5, 1,3, 1,3, 2,5 ) );
+$styleList[$c++] = array( 'no' =>   3, 'name' => "ãƒŸã‚¹ãƒˆãƒ¬ã‚¹",   'alf' => "mistress"   , 'knj' => "èˆžè²´äºº", 'pow' => array( 1,4, 3,5, 1,2, 2,5 ) );
+$styleList[$c++] = array( 'no' =>   4, 'name' => "ã‚«ãƒ–ãƒˆ",       'alf' => "kabuto"     , 'knj' => "å…œ"    , 'pow' => array( 2,4, 1,4, 3,5, 1,3 ) );
+$styleList[$c++] = array( 'no' =>   5, 'name' => "ã‚«ãƒªã‚¹ãƒž",     'alf' => "karisma"    , 'knj' => "ç‹©é­”"  , 'pow' => array( 1,3, 3,5, 0,3, 3,5 ) );
+$styleList[$c++] = array( 'no' =>   6, 'name' => "ãƒžãƒã‚­ãƒ³",     'alf' => "manikin"    , 'knj' => "çœŸä¼¼è¡¿", 'pow' => array( 1,3, 3,5, 2,5, 1,3 ) );
+$styleList[$c++] = array( 'no' =>   7, 'name' => "ã‚«ã‚¼",         'alf' => "kaze"       , 'knj' => "é¢¨"    , 'pow' => array( 2,5, 1,3, 2,4, 2,4 ) );
+$styleList[$c++] = array( 'no' =>   8, 'name' => "ãƒ•ã‚§ã‚¤ãƒˆ",     'alf' => "fate"       , 'knj' => "å¹³å¨å¾’", 'pow' => array( 2,5, 2,5, 1,3, 2,3 ) );
+$styleList[$c++] = array( 'no' =>   9, 'name' => "ã‚¯ãƒ­ãƒžã‚¯",     'alf' => "kuro-maku"  , 'knj' => "é»’å¹•"  , 'pow' => array( 1,3, 2,5, 1,3, 3,5 ) );
+$styleList[$c++] = array( 'no' =>  10, 'name' => "ã‚¨ã‚°ã‚¼ã‚¯",     'alf' => "exek."      , 'knj' => "ç›Šä¸–ç‹—", 'pow' => array( 2,5, 1,3, 1,3, 3,5 ) );
+$styleList[$c++] = array( 'no' =>  11, 'name' => "ã‚«ã‚¿ãƒŠ",       'alf' => "katana"     , 'knj' => "åˆ€"    , 'pow' => array( 2,4, 0,4, 3,5, 2,3 ) );
+$styleList[$c++] = array( 'no' =>  12, 'name' => "ã‚¯ã‚°ãƒ„",       'alf' => "kugutsu"    , 'knj' => "å‚€å„¡"  , 'pow' => array( 3,5, 0,4, 3,5, 1,2 ) );
+$styleList[$c++] = array( 'no' =>  13, 'name' => "ã‚«ã‚²",         'alf' => "kage"       , 'knj' => "å½±"    , 'pow' => array( 3,4, 0,5, 2,4, 2,3 ) );
+$styleList[$c++] = array( 'no' =>  14, 'name' => "ãƒãƒ£ã‚¯ãƒ©",     'alf' => "chakra"     , 'knj' => "è»Šéž"  , 'pow' => array( 2,5, 2,5, 3,5, 0,1 ) );
+$styleList[$c++] = array( 'no' =>  15, 'name' => "ãƒ¬ãƒƒã‚¬ãƒ¼",     'alf' => "legger"     , 'knj' => "è£‚ç‰™"  , 'pow' => array( 2,4, 2,4, 2,4, 1,4 ) );
+$styleList[$c++] = array( 'no' =>  16, 'name' => "ã‚«ãƒ–ãƒˆãƒ¯ãƒª",   'alf' => "kabuto-wari", 'knj' => "å…œå‰²"  , 'pow' => array( 2,4, 0,4, 2,3, 3,5 ) );
+$styleList[$c++] = array( 'no' =>  17, 'name' => "ãƒã‚¤ãƒ©ãƒ³ãƒ€ãƒ¼", 'alf' => "hilander"   , 'knj' => "æ‹ä¹±é§„", 'pow' => array( 2,5, 2,5, 0,1, 3,5 ) );
+$styleList[$c++] = array( 'no' =>  18, 'name' => "ãƒžãƒ¤ã‚«ã‚·",     'alf' => "mayakashi"  , 'knj' => "æ‘©è€¶è ", 'pow' => array( 3,5, 3,5, 0,2, 1,4 ) );
+$styleList[$c++] = array( 'no' =>  19, 'name' => "ãƒˆãƒ¼ã‚­ãƒ¼",     'alf' => "talkie"     , 'knj' => "æŠ•å–œå±…", 'pow' => array( 2,5, 3,5, 1,3, 1,3 ) );
+$styleList[$c++] = array( 'no' =>  20, 'name' => "ã‚¤ãƒŒ",         'alf' => "inu"        , 'knj' => "çŠ¬"    , 'pow' => array( 3,5, 1,3, 2,5, 1,3 ) );
+$styleList[$c++] = array( 'no' =>  21, 'name' => "ãƒ‹ãƒ¥ãƒ¼ãƒ­",     'alf' => "neuro"      , 'knj' => "æ–°ç”Ÿè·¯", 'pow' => array( 3,5, 2,5, 0,1, 2,5 ) );
 
-$styleList[$c++] = array( 'no' =>  -1, 'name' => "¥Ò¥ë¥³",       'alf' => "hiruko"     , 'knj' => "¿åÉÈ»Ò", 'pow' => array( 1,3, 3,5, 3,5, 0,3 ) );
-$styleList[$c++] = array( 'no' =>  -2, 'name' => "¥¯¥í¥¬¥Í",     'alf' => "kurogane"   , 'knj' => "¹õ¶â",   'pow' => array( 3,5, 2,4, 2,4, 0,3 ) );
-$styleList[$c++] = array( 'no' =>  -7, 'name' => "¥¢¥é¥·",       'alf' => "arashi"     , 'knj' => "Íò    ", 'pow' => array( 3,5, 0,3, 1,3, 3,5 ) );
-$styleList[$c++] = array( 'no' =>  -9, 'name' => "¥«¥²¥à¥·¥ã",   'alf' => "kage-musya" , 'knj' => "±ÆÉð¼Ô", 'pow' => array( 2,4, 3,5, 2,4, 0,3 ) );
-$styleList[$c++] = array( 'no' => -18, 'name' => "¥¢¥ä¥«¥·",     'alf' => "ayakashi"   , 'knj' => "ÍÅ"    , 'pow' => array( 0,5, 1,5, 3,2, 3,4 ) );
+$styleList[$c++] = array( 'no' =>  -1, 'name' => "ãƒ’ãƒ«ã‚³",       'alf' => "hiruko"     , 'knj' => "æ°´è›­å­", 'pow' => array( 1,3, 3,5, 3,5, 0,3 ) );
+$styleList[$c++] = array( 'no' =>  -2, 'name' => "ã‚¯ãƒ­ã‚¬ãƒ",     'alf' => "kurogane"   , 'knj' => "é»’é‡‘",   'pow' => array( 3,5, 2,4, 2,4, 0,3 ) );
+$styleList[$c++] = array( 'no' =>  -7, 'name' => "ã‚¢ãƒ©ã‚·",       'alf' => "arashi"     , 'knj' => "åµ    ", 'pow' => array( 3,5, 0,3, 1,3, 3,5 ) );
+$styleList[$c++] = array( 'no' =>  -9, 'name' => "ã‚«ã‚²ãƒ ã‚·ãƒ£",   'alf' => "kage-musya" , 'knj' => "å½±æ­¦è€…", 'pow' => array( 2,4, 3,5, 2,4, 0,3 ) );
+$styleList[$c++] = array( 'no' => -18, 'name' => "ã‚¢ãƒ¤ã‚«ã‚·",     'alf' => "ayakashi"   , 'knj' => "å¦–"    , 'pow' => array( 0,5, 1,5, 3,2, 3,4 ) );
 
-// ¥é¥¤¥Õ¥Ñ¥¹ ÈÖ¹æ¥³¡¼¥É
+// ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹ ç•ªå·ã‚³ãƒ¼ãƒ‰
 $lifePassCard = NULL;
 $lifePassCard[ 0] = "Joker";
-$lifePassCard[ 1] = "£²";
-$lifePassCard[ 2] = "£³";
-$lifePassCard[ 3] = "£´";
-$lifePassCard[ 4] = "£µ";
-$lifePassCard[ 5] = "£¶";
-$lifePassCard[ 6] = "£·";
-$lifePassCard[ 7] = "£¸";
-$lifePassCard[ 8] = "£¹";
+$lifePassCard[ 1] = "ï¼’";
+$lifePassCard[ 2] = "ï¼“";
+$lifePassCard[ 3] = "ï¼”";
+$lifePassCard[ 4] = "ï¼•";
+$lifePassCard[ 5] = "ï¼–";
+$lifePassCard[ 6] = "ï¼—";
+$lifePassCard[ 7] = "ï¼˜";
+$lifePassCard[ 8] = "ï¼™";
 $lifePassCard[ 9] = "10";
-$lifePassCard[10] = "£Ê";
-$lifePassCard[11] = "£Ñ";
-$lifePassCard[12] = "£Ë";
-$lifePassCard[13] = "£Á";
-$lifePassCard[-1] = "¡Ý";
+$lifePassCard[10] = "ï¼ª";
+$lifePassCard[11] = "ï¼±";
+$lifePassCard[12] = "ï¼«";
+$lifePassCard[13] = "ï¼¡";
+$lifePassCard[-1] = "âˆ’";
 
 $lifePassPlace = NULL;
-$lifePassPlace = array( 'id' => "NOVA", 'name' => "£Î¡ý£Ö£Á" );
+$lifePassPlace = array( 'id' => "NOVA", 'name' => "ï¼®â—Žï¼¶ï¼¡" );
 
-// ¥é¥¤¥Õ¥Ñ¥¹½Ð¼«É½[N¡ýVA]
+// ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹å‡ºè‡ªè¡¨[Nâ—ŽVA]
 $lifePass = NULL;
 $lifePass[] = array( 'type' => "birth", 'place' => "NOVA", 'no' =>  0, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "birth", 'place' => "NOVA", 'no' =>  1, 'name' => "", 'skill' => "", );
@@ -101,7 +101,7 @@ $lifePass[] = array( 'type' => "birth", 'place' => "NOVA", 'no' => 12, 'name' =>
 $lifePass[] = array( 'type' => "birth", 'place' => "NOVA", 'no' => 13, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "birth", 'place' => "NOVA", 'no' => -1, 'name' => "", 'skill' => "", );
 
-// ¥é¥¤¥Õ¥Ñ¥¹·Ð¸³É½[N¡ýVA]
+// ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹çµŒé¨“è¡¨[Nâ—ŽVA]
 $lifePass[] = array( 'type' => "exp", 'place' => "NOVA", 'no' =>  0, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "exp", 'place' => "NOVA", 'no' =>  1, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "exp", 'place' => "NOVA", 'no' =>  2, 'name' => "", 'skill' => "", );
@@ -118,7 +118,7 @@ $lifePass[] = array( 'type' => "exp", 'place' => "NOVA", 'no' => 12, 'name' => "
 $lifePass[] = array( 'type' => "exp", 'place' => "NOVA", 'no' => 13, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "exp", 'place' => "NOVA", 'no' => -1, 'name' => "", 'skill' => "", );
 
-// ¥é¥¤¥Õ¥Ñ¥¹î°íðÉ½[N¡ýVA]
+// ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹é‚‚é€…è¡¨[Nâ—ŽVA]
 $lifePass[] = array( 'type' => "enc", 'place' => "NOVA", 'no' =>  0, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "enc", 'place' => "NOVA", 'no' =>  1, 'name' => "", 'skill' => "", );
 $lifePass[] = array( 'type' => "enc", 'place' => "NOVA", 'no' =>  2, 'name' => "", 'skill' => "", );
@@ -136,78 +136,78 @@ $lifePass[] = array( 'type' => "enc", 'place' => "NOVA", 'no' => 13, 'name' => "
 $lifePass[] = array( 'type' => "enc", 'place' => "NOVA", 'no' => -1, 'name' => "", 'skill' => "", );
 
 
-// ¥­¥ã¥é¥¯¥¿Ê¬Îà°ìÍ÷
+// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿åˆ†é¡žä¸€è¦§
 $c = 0;
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast"                             , 'name' => "Á´¥­¥ã¥¹¥È" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/assassin"  , 'name' => "ÀïÆ®·Ï/»¦¤·²°" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/hunter"    , 'name' => "ÀïÆ®·Ï/¾Þ¶â²Ô¤®" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/street"    , 'name' => "ÀïÆ®·Ï/¹Ó»ö²°" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/bodyguard" , 'name' => "ÀïÆ®·Ï/¥Ü¥Ç¥£¥¬¡¼¥É" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/etc"       , 'name' => "ÀïÆ®·Ï/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/freelance/fighter"           , 'name' => "ÀïÆ®·ÏÁ´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/detective" , 'name' => "¾ðÊó·Ï/ÃµÄå" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/neuro"     , 'name' => "¾ðÊó·Ï/¥Ë¥å¡¼¥í" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/fixer"     , 'name' => "¾ðÊó·Ï/¥Õ¥£¥¯¥µ¡¼" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/etc"       , 'name' => "¾ðÊó·Ï/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/freelance/intelli"           , 'name' => "¾ðÊó·ÏÁ´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/freelance"                   , 'name' => "¥Õ¥ê¡¼¥é¥ó¥¹Á´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/company/chihaya"             , 'name' => "´ë¶È/ÀéÁá" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/company/megacorp"            , 'name' => "´ë¶È/¥á¥¬¥³¡¼¥Ý" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/company/etc"                 , 'name' => "´ë¶È/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/company"                     , 'name' => "´ë¶ÈÁ´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/police/blakkhounds"          , 'name' => "·Ù»¡/¥Ö¥é¥Ã¥¯¥Ï¥¦¥ó¥É" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/police/corporate"            , 'name' => "·Ù»¡/´ë¶È·Ù»¡" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/police/etc"                  , 'name' => "·Ù»¡/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/police"                      , 'name' => "·Ù»¡´Ø·¸Á´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/kawato"               , 'name' => "ÈÈºáÁÈ¿¥/²ÏÅÏÏ¢¹ç" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/sangoukai"            , 'name' => "ÈÈºáÁÈ¿¥/»°¹ç²ñ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/carlyle"              , 'name' => "ÈÈºáÁÈ¿¥/¥«¡¼¥é¥¤¥ë" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/etc"                  , 'name' => "ÈÈºáÁÈ¿¥/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/legger"                      , 'name' => "ÈÈºáÁÈ¿¥Á´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/media/press"                 , 'name' => "¥á¥Ç¥£¥¢/ÊóÆ»´Ø·¸" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/media/entertainment"         , 'name' => "¥á¥Ç¥£¥¢/·ÝÇ½³¦" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/media/etc"                   , 'name' => "¥á¥Ç¥£¥¢/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/media"                       , 'name' => "¥á¥Ç¥£¥¢Á´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/exorcist"             , 'name' => "¥¢¥¹¥È¥é¥ë/ÂàËâ»Õ¡¦½Ñ»Õ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/sanctuary"            , 'name' => "¥¢¥¹¥È¥é¥ë/¿¿¶µ¡¦À»ÊìÅÂ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/ayakashi"             , 'name' => "¥¢¥¹¥È¥é¥ë/¥¢¥ä¥«¥·" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/etc"                  , 'name' => "¥¢¥¹¥È¥é¥ë/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/astral"                      , 'name' => "¥¢¥¹¥È¥é¥ëÁ´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/school"                      , 'name' => "³ØÀ¸¡¦³Ø¹»´Ø·¸¼Ô" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/tatara"                      , 'name' => "µ»½Ñ¼Ô¡¦°å¼ÔÅù" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/etc"                         , 'name' => "¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "guest"                            , 'name' => "Á´¥²¥¹¥È¡Ê¥Í¥¿¥Ð¥ìÃí°Õ¡Ë" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/fighter"                    , 'name' => "Guest/ÀïÆ®·Ï" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/intelli"                    , 'name' => "Guest/¾ðÊó·Ï" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/company"                    , 'name' => "Guest/´ë¶È·Ï" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/fixer"                      , 'name' => "Guest/¥Õ¥£¥¯¥µ¡¼" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/legger"                     , 'name' => "Guest/ÈÈºáÁÈ¿¥·Ï" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/police"                     , 'name' => "Guest/·Ù»¡´Ø·¸" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/militaly"                   , 'name' => "Guest/·³Á´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/religion/sanctuary"         , 'name' => "Guest/¿¿¶µ/À»ÊìÎÎ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/religion/catharsis"         , 'name' => "Guest/¿¿¶µ/¾ô²½ÇÉ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/religion/etc"               , 'name' => "Guest/¿¿¶µ/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "guest/religion"                   , 'name' => "Guest/¿¿¶µÁ´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/japanese"                   , 'name' => "Guest/ÆüËÜ¿Í" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/media"                      , 'name' => "Guest/¥á¥Ç¥£¥¢´Ø·¸¼Ô" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/astral/exorcist"            , 'name' => "Guest/¥¢¥¹¥È¥é¥ë/ÂàËâ»Õ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/astral/ayakashi"            , 'name' => "Guest/¥¢¥¹¥È¥é¥ë/¥¢¥ä¥«¥·" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/astral/etc"                 , 'name' => "Guest/¥¢¥¹¥È¥é¥ë/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "guest/astral"                     , 'name' => "Guest/¥¢¥¹¥È¥é¥ëÁ´ÈÌ" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/school"                     , 'name' => "Guest/³ØÀ¸¡¦³Ø¹»´Ø·¸¼Ô" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/etc"                        , 'name' => "Guest/¤½¤ÎÂ¾" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/target"                     , 'name' => "Guest/¾Þ¶â¼ó" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast"                             , 'name' => "å…¨ã‚­ãƒ£ã‚¹ãƒˆ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/assassin"  , 'name' => "æˆ¦é—˜ç³»/æ®ºã—å±‹" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/hunter"    , 'name' => "æˆ¦é—˜ç³»/è³žé‡‘ç¨¼ãŽ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/street"    , 'name' => "æˆ¦é—˜ç³»/è’äº‹å±‹" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/bodyguard" , 'name' => "æˆ¦é—˜ç³»/ãƒœãƒ‡ã‚£ã‚¬ãƒ¼ãƒ‰" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/fighter/etc"       , 'name' => "æˆ¦é—˜ç³»/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/freelance/fighter"           , 'name' => "æˆ¦é—˜ç³»å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/detective" , 'name' => "æƒ…å ±ç³»/æŽ¢åµ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/neuro"     , 'name' => "æƒ…å ±ç³»/ãƒ‹ãƒ¥ãƒ¼ãƒ­" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/fixer"     , 'name' => "æƒ…å ±ç³»/ãƒ•ã‚£ã‚¯ã‚µãƒ¼" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/freelance/intelli/etc"       , 'name' => "æƒ…å ±ç³»/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/freelance/intelli"           , 'name' => "æƒ…å ±ç³»å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/freelance"                   , 'name' => "ãƒ•ãƒªãƒ¼ãƒ©ãƒ³ã‚¹å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/company/chihaya"             , 'name' => "ä¼æ¥­/åƒæ—©" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/company/megacorp"            , 'name' => "ä¼æ¥­/ãƒ¡ã‚¬ã‚³ãƒ¼ãƒ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/company/etc"                 , 'name' => "ä¼æ¥­/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/company"                     , 'name' => "ä¼æ¥­å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/police/blakkhounds"          , 'name' => "è­¦å¯Ÿ/ãƒ–ãƒ©ãƒƒã‚¯ãƒã‚¦ãƒ³ãƒ‰" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/police/corporate"            , 'name' => "è­¦å¯Ÿ/ä¼æ¥­è­¦å¯Ÿ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/police/etc"                  , 'name' => "è­¦å¯Ÿ/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/police"                      , 'name' => "è­¦å¯Ÿé–¢ä¿‚å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/kawato"               , 'name' => "çŠ¯ç½ªçµ„ç¹”/æ²³æ¸¡é€£åˆ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/sangoukai"            , 'name' => "çŠ¯ç½ªçµ„ç¹”/ä¸‰åˆä¼š" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/carlyle"              , 'name' => "çŠ¯ç½ªçµ„ç¹”/ã‚«ãƒ¼ãƒ©ã‚¤ãƒ«" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/legger/etc"                  , 'name' => "çŠ¯ç½ªçµ„ç¹”/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/legger"                      , 'name' => "çŠ¯ç½ªçµ„ç¹”å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/media/press"                 , 'name' => "ãƒ¡ãƒ‡ã‚£ã‚¢/å ±é“é–¢ä¿‚" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/media/entertainment"         , 'name' => "ãƒ¡ãƒ‡ã‚£ã‚¢/èŠ¸èƒ½ç•Œ" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/media/etc"                   , 'name' => "ãƒ¡ãƒ‡ã‚£ã‚¢/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/media"                       , 'name' => "ãƒ¡ãƒ‡ã‚£ã‚¢å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/exorcist"             , 'name' => "ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/é€€é­”å¸«ãƒ»è¡“å¸«" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/sanctuary"            , 'name' => "ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/çœŸæ•™ãƒ»è–æ¯æ®¿" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/ayakashi"             , 'name' => "ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/ã‚¢ãƒ¤ã‚«ã‚·" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/astral/etc"                  , 'name' => "ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "cast/astral"                      , 'name' => "ã‚¢ã‚¹ãƒˆãƒ©ãƒ«å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/school"                      , 'name' => "å­¦ç”Ÿãƒ»å­¦æ ¡é–¢ä¿‚è€…" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/tatara"                      , 'name' => "æŠ€è¡“è€…ãƒ»åŒ»è€…ç­‰" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "cast/etc"                         , 'name' => "ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "guest"                            , 'name' => "å…¨ã‚²ã‚¹ãƒˆï¼ˆãƒã‚¿ãƒãƒ¬æ³¨æ„ï¼‰" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/fighter"                    , 'name' => "Guest/æˆ¦é—˜ç³»" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/intelli"                    , 'name' => "Guest/æƒ…å ±ç³»" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/company"                    , 'name' => "Guest/ä¼æ¥­ç³»" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/fixer"                      , 'name' => "Guest/ãƒ•ã‚£ã‚¯ã‚µãƒ¼" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/legger"                     , 'name' => "Guest/çŠ¯ç½ªçµ„ç¹”ç³»" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/police"                     , 'name' => "Guest/è­¦å¯Ÿé–¢ä¿‚" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/militaly"                   , 'name' => "Guest/è»å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/religion/sanctuary"         , 'name' => "Guest/çœŸæ•™/è–æ¯é ˜" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/religion/catharsis"         , 'name' => "Guest/çœŸæ•™/æµ„åŒ–æ´¾" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/religion/etc"               , 'name' => "Guest/çœŸæ•™/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "guest/religion"                   , 'name' => "Guest/çœŸæ•™å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/japanese"                   , 'name' => "Guest/æ—¥æœ¬äºº" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/media"                      , 'name' => "Guest/ãƒ¡ãƒ‡ã‚£ã‚¢é–¢ä¿‚è€…" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/astral/exorcist"            , 'name' => "Guest/ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/é€€é­”å¸«" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/astral/ayakashi"            , 'name' => "Guest/ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/ã‚¢ãƒ¤ã‚«ã‚·" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/astral/etc"                 , 'name' => "Guest/ã‚¢ã‚¹ãƒˆãƒ©ãƒ«/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "guest/astral"                     , 'name' => "Guest/ã‚¢ã‚¹ãƒˆãƒ©ãƒ«å…¨èˆ¬" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/school"                     , 'name' => "Guest/å­¦ç”Ÿãƒ»å­¦æ ¡é–¢ä¿‚è€…" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/etc"                        , 'name' => "Guest/ãã®ä»–" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "guest/target"                     , 'name' => "Guest/è³žé‡‘é¦–" );
 
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "all"                              , 'name' => "Á´¥­¥ã¥é¥¯¥¿" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "all"                              , 'name' => "å…¨ã‚­ãƒ£ãƒ©ã‚¯ã‚¿" );
 
-$cateList[$c++] = array( 'sidx' => 1 , 'id' => "sample"                           , 'name' => "¥µ¥ó¥×¥ë¥­¥ã¥é¥¯¥¿" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "sample/official"                  , 'name' => "¥µ¥ó¥×¥ë/F.E.A.R.¸ø¼°" );
-$cateList[$c++] = array( 'sidx' => 0 , 'id' => "sample/npcdata"                   , 'name' => "¥µ¥ó¥×¥ë/NPC¥Ç¡¼¥¿" );
+$cateList[$c++] = array( 'sidx' => 1 , 'id' => "sample"                           , 'name' => "ã‚µãƒ³ãƒ—ãƒ«ã‚­ãƒ£ãƒ©ã‚¯ã‚¿" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "sample/official"                  , 'name' => "ã‚µãƒ³ãƒ—ãƒ«/F.E.A.R.å…¬å¼" );
+$cateList[$c++] = array( 'sidx' => 0 , 'id' => "sample/npcdata"                   , 'name' => "ã‚µãƒ³ãƒ—ãƒ«/NPCãƒ‡ãƒ¼ã‚¿" );
 /* $cateList[$c++] = array( 'sidx' =>  , 'id' => , 'name' => "" ); */
 $cateList['num'] = $c;
 
 
-// ÆþÎÏ¥Õ¥©¡¼¥àÀ©¸ÂÄ¹
+// å…¥åŠ›ãƒ•ã‚©ãƒ¼ãƒ åˆ¶é™é•·
 $formSize['player'] = 80;
 $formSize['category'] = 40;
 $formSize['name'] = 80;
@@ -230,49 +230,49 @@ $formSize['profile'] = 8192;
 $formSize['comment'] = 8192;
 
 
-// ¥Æ¡¼¥Ö¥ëÄêµÁ
+// ãƒ†ãƒ¼ãƒ–ãƒ«å®šç¾©
 $tblScheme = array(
-	array( 'pri' => TRUE,  'type' => "INTEGER", 'name' => "cid"),			// IDÈÖ¹æ
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "player"),		// ¥×¥ì¥¤¥ä¡¼
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "passwd"),		// ¥Ñ¥¹¥ï¡¼¥É
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "regist"),		// ÅÐÏ¿Æü
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "updtime"),		// ºÇ½ª¹¹¿·Æü
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "name"),			// Ì¾Á°¡Ê¥Ï¥ó¥É¥ë´Þ¤à¡Ë
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "category"),		// ¥«¥Æ¥´¥êID
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "cat_tags"),		// ¥«¥Æ¥´¥ê¥¿¥°
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "post"),			// ¿¦¶È/½êÂ°
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "style1"),		// ¥¹¥¿¥¤¥ë£±
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "style2"),		// ¥¹¥¿¥¤¥ë£²
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "style3"),		// ¥¹¥¿¥¤¥ë£³
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "persona"),		// ¥Ú¥ë¥½¥Ê
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "keyst"),			// ¥­¡¼
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "reason_ab"),		// ÍýÀ­Ç½ÎÏÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "reason_ct"),		// ÍýÀ­À©¸æÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "passion_ab"),	// ´¶¾ðÇ½ÎÏÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "passion_ct"),	// ´¶¾ðÀ©¸æÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "life_ab"),		// À¸Ì¿Ç½ÎÏÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "life_ct"),		// À¸Ì¿À©¸æÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "mundane_ab"),	// ³°³¦Ç½ÎÏÃÍ
-	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "mundane_ct"),	// ³°³¦À©¸æÃÍ
+	array( 'pri' => TRUE,  'type' => "INTEGER", 'name' => "cid"),			// IDç•ªå·
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "player"),		// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "passwd"),		// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "regist"),		// ç™»éŒ²æ—¥
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "updtime"),		// æœ€çµ‚æ›´æ–°æ—¥
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "name"),			// åå‰ï¼ˆãƒãƒ³ãƒ‰ãƒ«å«ã‚€ï¼‰
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "category"),		// ã‚«ãƒ†ã‚´ãƒªID
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "cat_tags"),		// ã‚«ãƒ†ã‚´ãƒªã‚¿ã‚°
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "post"),			// è·æ¥­/æ‰€å±ž
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "style1"),		// ã‚¹ã‚¿ã‚¤ãƒ«ï¼‘
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "style2"),		// ã‚¹ã‚¿ã‚¤ãƒ«ï¼’
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "style3"),		// ã‚¹ã‚¿ã‚¤ãƒ«ï¼“
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "persona"),		// ãƒšãƒ«ã‚½ãƒŠ
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "keyst"),			// ã‚­ãƒ¼
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "reason_ab"),		// ç†æ€§èƒ½åŠ›å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "reason_ct"),		// ç†æ€§åˆ¶å¾¡å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "passion_ab"),	// æ„Ÿæƒ…èƒ½åŠ›å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "passion_ct"),	// æ„Ÿæƒ…åˆ¶å¾¡å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "life_ab"),		// ç”Ÿå‘½èƒ½åŠ›å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "life_ct"),		// ç”Ÿå‘½åˆ¶å¾¡å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "mundane_ab"),	// å¤–ç•Œèƒ½åŠ›å€¤
+	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "mundane_ct"),	// å¤–ç•Œåˆ¶å¾¡å€¤
 	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "combatspeed"),	// CombatSpeed
 	array( 'pri' => FALSE, 'type' => "INTEGER", 'name' => "actionrank"),	// ActionRank
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "lifepass"),		// ¥é¥¤¥Õ¥Ñ¥¹
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "citizen"),		// »ÔÌ±ID
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "age"),			// Ç¯Îð
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "jender"),		// À­ÊÌ
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "height"),		// ¿ÈÄ¹
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "weight"),		// ÂÎ½Å
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "eyes"),			// Æ·¤Î¿§
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "hair"),			// È±¤Î¿§
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "skin"),			// È©¤Î¿§
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "birthday"),		// ÃÂÀ¸Æü
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "lifepass"),		// ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "citizen"),		// å¸‚æ°‘ID
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "age"),			// å¹´é½¢
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "jender"),		// æ€§åˆ¥
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "height"),		// èº«é•·
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "weight"),		// ä½“é‡
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "eyes"),			// çž³ã®è‰²
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "hair"),			// é«ªã®è‰²
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "skin"),			// è‚Œã®è‰²
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "birthday"),		// èª•ç”Ÿæ—¥
 	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "photo"),			// 
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "exp"),			// ¾ÃÈñ·Ð¸³ÅÀ
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "pub_skill"),		// °ìÈÌµ»Ç½
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "spc_skill"),		// ÆÃ¼ìµ»Ç½
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "items"),			// ÁõÈ÷
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "profile"),		// Î¬Îò
-	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "comment")		// ¥³¥á¥ó¥È
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "exp"),			// æ¶ˆè²»çµŒé¨“ç‚¹
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "pub_skill"),		// ä¸€èˆ¬æŠ€èƒ½
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "spc_skill"),		// ç‰¹æ®ŠæŠ€èƒ½
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "items"),			// è£…å‚™
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "profile"),		// ç•¥æ­´
+	array( 'pri' => FALSE, 'type' => "TEXT",    'name' => "comment")		// ã‚³ãƒ¡ãƒ³ãƒˆ
 );
 
 ?>

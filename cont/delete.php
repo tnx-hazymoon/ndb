@@ -17,35 +17,35 @@ if( $CONT_MSG != "" ) {
 ?>
 <table border=1>
 	<tr>
-		<th>��Ͽ�ʥ�С�</th>
+		<th>登録ナンバー</th>
 		<td><?php echo sprintf( "%d",$CONT_CID ); ?></td>
 	</tr>
 	<tr>
-		<th>�ץ쥤�䡼</th>
+		<th>プレイヤー</th>
 		<td><?php echo htmlspecialchars( $rec['player'] ); ?></td>
 	</tr>
 	<tr>
-		<th>�ϥ�ɥ�</th>
+		<th>ハンドル</th>
 		<td><?php echo htmlspecialchars( $rec['name'] ); ?></td>
 	</tr>
 	<tr>
-		<th>��������</th>
+		<th>スタイル</th>
 		<td><?php echo htmlspecialchars( style2format( $rec['style1'],$rec['style2'],$rec['style3'],$rec['persona'],$rec['keyst'] ) ); ?></td>
 		</tr>
 	<tr>
-		<th>����</th>
+		<th>設定</th>
 		<td><?php echo nl2br( htmlspecialchars( $rec['profile'] ) ); ?></td>
 	</tr>
 </table>
 <br>
 <br>
 <b>
-���Υ���饯�����Υǡ����������ޤ���<br>
-����ϤǤ��ޤ��󤬤�������Ǥ�����</b>
+このキャラクターのデータを削除します。<br>
+復旧はできませんがよろしいですか？</b>
 </p>
 <FORM action="<?php echo $scriptPath; ?>" method=post>
 <INPUT type=hidden name=CMD value=delete>
 <INPUT type=hidden name=NO value=<?php echo sprintf( "%d",$CONT_CID ); ?>>
-�ѥ����:<input type=password name=pass size=15>
-<input type=submit value=���>
+パスワード:<input type=password name=pass size=15>
+<input type=submit value=削除>
 </form>

@@ -1,9 +1,9 @@
 <?php
-// ¶¦ÄÌ´Ø¿ô·²
+// å…±é€šé–¢æ•°ç¾¤
 ?>
 <?php
 /*%FNC--------------------------------
- Function	¥Õ¥©¡¼¥à¤«¤éÊ¸»úÎó¤ò¼èÆÀ¤¹¤ë
+ Function	ãƒ•ã‚©ãƒ¼ãƒ ã‹ã‚‰æ–‡å­—åˆ—ã‚’å–å¾—ã™ã‚‹
  Process	
  Result		
  Memo		
@@ -22,7 +22,7 @@ function getf_text(
 }
 
 /*%FNC--------------------------------
- Function	¥Õ¥©¡¼¥à¤«¤é¿ôÃÍ¤ò¼èÆÀ¤¹¤ë
+ Function	ãƒ•ã‚©ãƒ¼ãƒ ã‹ã‚‰æ•°å€¤ã‚’å–å¾—ã™ã‚‹
  Process	
  Result		
  Memo		
@@ -52,7 +52,7 @@ function getf_num(
 }
 
 /*%FNC--------------------------------
- Function	¥Õ¥©¡¼¥à¤«¤éÊ£¿ô¹ÔÊ¸»úÎó¤ò¼èÆÀ¤¹¤ë
+ Function	ãƒ•ã‚©ãƒ¼ãƒ ã‹ã‚‰è¤‡æ•°è¡Œæ–‡å­—åˆ—ã‚’å–å¾—ã™ã‚‹
  Process	
  Result		
  Memo		
@@ -87,7 +87,7 @@ function getf_txtbox(
 }
 
 /*%FNC--------------------------------
- Function	¥Õ¥©¡¼¥à¤«¤é¥¢¥Ã¥×¥í¡¼¥É¤µ¤ì¤¿¥Õ¥¡¥¤¥ë¾ðÊó¤ò¼èÆÀ¤¹¤ë
+ Function	ãƒ•ã‚©ãƒ¼ãƒ ã‹ã‚‰ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«æƒ…å ±ã‚’å–å¾—ã™ã‚‹
  Process	
  Result		
  Memo		
@@ -124,7 +124,7 @@ function getf_file(
 	}
 }
 
-// ÆüÉÕ¤Î¥Á¥§¥Ã¥¯
+// æ—¥ä»˜ã®ãƒã‚§ãƒƒã‚¯
 function strdate_check( $str )
 {
 	$year = substr( $str,0,4 );
@@ -140,7 +140,7 @@ function strdate_check( $str )
 	else return FALSE;
 }
 
-// »þ¹ï¤Î¥Á¥§¥Ã¥¯
+// æ™‚åˆ»ã®ãƒã‚§ãƒƒã‚¯
 function strtime_check( $str )
 {
 	$hour = substr( $str,0,2 );
@@ -152,7 +152,7 @@ function strtime_check( $str )
 	else return FALSE;
 }
 
-// ·îËè¤ÎÆü¿ô¤òÊÖ¤¹
+// æœˆæ¯Žã®æ—¥æ•°ã‚’è¿”ã™
 function day_of_month( $year,$mon )
 {
 	switch( $mon ) {
@@ -172,8 +172,8 @@ function day_of_month( $year,$mon )
 	}
 }
 
-// ¡Ö¼¡¤ÎÆü¡×¤òÊÖ¤¹
-// ½ñ¼°¤Ï YYYYMMDD
+// ã€Œæ¬¡ã®æ—¥ã€ã‚’è¿”ã™
+// æ›¸å¼ã¯ YYYYMMDD
 function next_date( $str )
 {
 	$year = (int)substr( $str,0,4 );
@@ -193,8 +193,8 @@ function next_date( $str )
 	return sprintf( "%04d%02d%02d",$year,$mon,$day );
 }
 
-// ¡Ö¼¡¤ÎÆü¡×¤òÊÖ¤¹
-// ½ñ¼°¤Ï YYYY/MM/DD
+// ã€Œæ¬¡ã®æ—¥ã€ã‚’è¿”ã™
+// æ›¸å¼ã¯ YYYY/MM/DD
 function next_date2( $str )
 {
 	$year = (int)substr( $str,0,4 );

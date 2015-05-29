@@ -34,7 +34,7 @@ else {
 ?>
 <TABLE cellSpacing=1 width=<?php printf( "%d",$inputTableWidth ); ?> border=1>
 	<TBODY>
-	<TR><TH colSpan=4>ёаёбёоёуёт║║ёцёаёсёт</TH></TR>
+	<TR><TH colSpan=4>О╪║О╪╒О╪╞О╪╣О╪╢Ц──О╪ёО╪║О╪ЁО╪╢</TH></TR>
 	<TR>
 		<TH>HANDLE</TH>
 		<TD colSpan=3><INPUT size=50 name=handle></TD>
@@ -66,7 +66,7 @@ else {
 		<TH>STYLEZ</TH>
 		<td>
 			<select name=style1 size=1 onChange="calc()">
-				<option<?php if( $rec['style1'] < -99 )    echo " selected"; ?>>║щ</option>
+				<option<?php if( $rec['style1'] < -99 )    echo " selected"; ?>>Б┬▓</option>
 				<?php
 					foreach( $styleList as $strec ) {
 						echo "<option";
@@ -77,12 +77,12 @@ else {
 					}
 				?>
 			</select>
-			║Щ<input type=radio name=persona value=1<?php if( $rec['persona'] == 1 ) echo " checked"; ?>>
-			║Э<input type=radio name=key value=1<?php if( $rec['keyst'] == 1 ) echo " checked"; ?>>
+			Б≈▌<input type=radio name=persona value=1<?php if( $rec['persona'] == 1 ) echo " checked"; ?>>
+			Б≈▐<input type=radio name=key value=1<?php if( $rec['keyst'] == 1 ) echo " checked"; ?>>
 		</td>
 		<td>
 			<select name=style2 size=1 onChange="calc()">
-				<option<?php if( $rec['style2'] < -99 )    echo " selected"; ?>>║щ</option>
+				<option<?php if( $rec['style2'] < -99 )    echo " selected"; ?>>Б┬▓</option>
 				<?php
 					foreach( $styleList as $strec ) {
 						echo "<option";
@@ -93,12 +93,12 @@ else {
 					}
 				?>
 			</select>
-			║Щ<input type=radio name=persona value=2<?php if( $rec['persona'] == 2 ) echo " checked"; ?>>
-			║Э<input type=radio name=key value=2<?php if( $rec['keyst'] == 2 ) echo " checked"; ?>>
+			Б≈▌<input type=radio name=persona value=2<?php if( $rec['persona'] == 2 ) echo " checked"; ?>>
+			Б≈▐<input type=radio name=key value=2<?php if( $rec['keyst'] == 2 ) echo " checked"; ?>>
 		</td>
 		<td>
 			<select name=style3 size=1 onChange="calc()">
-				<option<?php if( $rec['style3'] < -99 )    echo " selected"; ?>>║щ</option>
+				<option<?php if( $rec['style3'] < -99 )    echo " selected"; ?>>Б┬▓</option>
 				<?php
 					foreach( $styleList as $strec ) {
 						echo "<option";
@@ -109,20 +109,20 @@ else {
 					}
 				?>
 			</select>
-			║Щ<input type=radio name=persona value=3<?php if( $rec['persona'] == 3 ) echo " checked"; ?>>
-			║Э<input type=radio name=key value=3<?php if( $rec['keyst'] == 3 ) echo " checked"; ?>>
+			Б≈▌<input type=radio name=persona value=3<?php if( $rec['persona'] == 3 ) echo " checked"; ?>>
+			Б≈▐<input type=radio name=key value=3<?php if( $rec['keyst'] == 3 ) echo " checked"; ?>>
 		</td>
 	</TR>
 	<TR>
 		<TH>POWERZ</TH>
 		<TD colSpan=3>
-			Reason<input type=text size=2 name=reason value=<?php echo sprintf( "%d",$rec['reason_ab'] ); ?>>/<input type=text size=2 name=reason_c value=<?php echo sprintf( "%d",$rec['reason_ct'] ); ?>>║║
-			Passion<input type=text size=2 name=passion value=<?php echo sprintf( "%d",$rec['passion_ab'] ); ?>>/<input type=text size=2 name=passion_c value=<?php echo sprintf( "%d",$rec['passion_ct'] ); ?>>║║
-			Life<input type=text size=2 name=life value=<?php echo sprintf( "%d",$rec['life_ab'] ); ?>>/<input type=text size=2 name=life_c value=<?php echo sprintf( "%d",$rec['life_ct'] ); ?>>║║
+			Reason<input type=text size=2 name=reason value=<?php echo sprintf( "%d",$rec['reason_ab'] ); ?>>/<input type=text size=2 name=reason_c value=<?php echo sprintf( "%d",$rec['reason_ct'] ); ?>>Ц──
+			Passion<input type=text size=2 name=passion value=<?php echo sprintf( "%d",$rec['passion_ab'] ); ?>>/<input type=text size=2 name=passion_c value=<?php echo sprintf( "%d",$rec['passion_ct'] ); ?>>Ц──
+			Life<input type=text size=2 name=life value=<?php echo sprintf( "%d",$rec['life_ab'] ); ?>>/<input type=text size=2 name=life_c value=<?php echo sprintf( "%d",$rec['life_ct'] ); ?>>Ц──
 			Mundane<input type=text size=2 name=mundane value=<?php echo sprintf( "%d",$rec['mundane_ab'] ); ?>>/<input type=text size=2 name=mundane_c value=<?php echo sprintf( "%d",$rec['mundane_ct'] ); ?>><br>
-			║║║║║║║║CombatSpeed<input type=text size=4 name=combatspeed value=<?php echo sprintf( "%d",$rec['combatspeed'] ); ?>>
+			Ц──Ц──Ц──Ц──CombatSpeed<input type=text size=4 name=combatspeed value=<?php echo sprintf( "%d",$rec['combatspeed'] ); ?>>
 			<INPUT onclick=recalc_combatspeed() type=button value=ReCalc>
-			║║║║ActionRank<input type=text size=4 name=actionrank value=<?php echo sprintf( "%d",$rec['actionrank'] ); ?>>
+			Ц──Ц──ActionRank<input type=text size=4 name=actionrank value=<?php echo sprintf( "%d",$rec['actionrank'] ); ?>>
 		</TD>
 	</TR>
 	<TR>
@@ -164,17 +164,17 @@ else {
 			<select name=jender size=1>
 				<?php
 				switch( $rec['jender'] ) {
-				case "║щ" : $jender = "║щ"; break;
-				case "║И" : $jender = "║И"; break;
-				case "║Й" : $jender = "║Й"; break;
-				case "║╘" : $jender = "║╘"; break;
-				default :   $jender = "║щ"; break;
+				case "Б┬▓" : $jender = "Б┬▓"; break;
+				case "Б≥┌" : $jender = "Б≥┌"; break;
+				case "Б≥─" : $jender = "Б≥─"; break;
+				case "О╪÷" : $jender = "О╪÷"; break;
+				default :   $jender = "Б┬▓"; break;
 				}
 				?>
-				<option<?php if( $jender == "║щ" ) echo " selected"; ?>>║щ</option>
-				<option<?php if( $jender == "║И" ) echo " selected"; ?>>║И</option>
-				<option<?php if( $jender == "║Й" ) echo " selected"; ?>>║Й</option>
-				<option<?php if( $jender == "║╘" ) echo " selected"; ?>>║╘</option>
+				<option<?php if( $jender == "Б┬▓" ) echo " selected"; ?>>Б┬▓</option>
+				<option<?php if( $jender == "Б≥┌" ) echo " selected"; ?>>Б≥┌</option>
+				<option<?php if( $jender == "Б≥─" ) echo " selected"; ?>>Б≥─</option>
+				<option<?php if( $jender == "О╪÷" ) echo " selected"; ?>>О╪÷</option>
 			</select>
 			Heit:<input size=3 type=text name=heit value="<?php echo htmlspecialchars( $rec['height'] ); ?>">cm
 			Weit:<input size=3 type=text name=weit value="<?php echo htmlspecialchars( $rec['weight'] ); ?>">kg
@@ -199,26 +199,26 @@ else {
 		</TD>
 	</TR>
 	<TR>
-		<TH>DATA<BR>ё╠║Э║щ║щ║щ<BR>ё╠║щ║Э║щ║щ<BR>ё╠║щ║щ║Э║щ<BR>ё╠║щ║щ║щ║Э<BR>ё╡║Э║Э║щ║щ<BR>ё╡║Э║щ║Э║щ<BR>ё╡║Э║щ║щ║Э<BR>ё╡║щ║Э║Э║щ<BR>ё╡║щ║Э║щ║Э<BR>ё╡║щ║щ║Э║Э<BR>ёЁ║Э║Э║Э║щ<BR>ёЁ║Э║Э║щ║Э<BR>ёЁ║Э║щ║Э║Э<BR>ёЁ║щ║Э║Э║Э<BR>ё╢║Э║Э║Э║Э</TH>
-		<TD>NomalSkillz║║
+		<TH>DATA<BR>О╪▒Б≈▐Б┬▓Б┬▓Б┬▓<BR>О╪▒Б┬▓Б≈▐Б┬▓Б┬▓<BR>О╪▒Б┬▓Б┬▓Б≈▐Б┬▓<BR>О╪▒Б┬▓Б┬▓Б┬▓Б≈▐<BR>О╪▓Б≈▐Б≈▐Б┬▓Б┬▓<BR>О╪▓Б≈▐Б┬▓Б≈▐Б┬▓<BR>О╪▓Б≈▐Б┬▓Б┬▓Б≈▐<BR>О╪▓Б┬▓Б≈▐Б≈▐Б┬▓<BR>О╪▓Б┬▓Б≈▐Б┬▓Б≈▐<BR>О╪▓Б┬▓Б┬▓Б≈▐Б≈▐<BR>О╪⌠Б≈▐Б≈▐Б≈▐Б┬▓<BR>О╪⌠Б≈▐Б≈▐Б┬▓Б≈▐<BR>О╪⌠Б≈▐Б┬▓Б≈▐Б≈▐<BR>О╪⌠Б┬▓Б≈▐Б≈▐Б≈▐<BR>О╪■Б≈▐Б≈▐Б≈▐Б≈▐</TH>
+		<TD>NomalSkillzЦ──
 			<INPUT onclick=n_skill_listup() type=button value=ListUp><BR>
 			<textarea rows=50 cols=30 name=normalskill><?php echo htmlspecialchars( $rec['pub_skill'] ); ?></textarea>
 		</TD>
-		<TD>StyleSkillz║║
+		<TD>StyleSkillzЦ──
 			<INPUT onclick=s_skill_listup() type=button value=ListUp><BR>
 			<textarea rows=50 cols=45 name=superskill><?php echo htmlspecialchars( $rec['spc_skill'] ); ?></textarea>
 		</TD>
-		<TD>Outfitz║║
+		<TD>OutfitzЦ──
 			<INPUT onclick=add_defequip() type=button value=DefaultEquip><BR>
 			<textarea rows=50 cols=40 name=outfit><?php echo htmlspecialchars( $rec['items'] ); ?></textarea>
 		</TD>
 	</TR>
 	<TR>
 		<TH colSpan=5>
-			╔я╔╧╔О║╪╔и:
+			Ц┐▒Ц┌╧Ц┐╞Ц┐╪Ц┐┴:
 			<INPUT type=password size=10 name=pass>
-			<INPUT type=submit value=епо©><br>
-			<font color="red">╒╗╔я╔╧╔О║╪╔и╓ои╛╓╨фЧно╓╥╓ф╓╞╓ю╓╣╓╓║ё</font>
+			<INPUT type=submit value=Г≥╩И▄╡><br>
+			<font color="red">Б─╩Ц┐▒Ц┌╧Ц┐╞Ц┐╪Ц┐┴Ц│╞Е©┘Ц│ Е┘╔Е┼⌡Ц│≈Ц│╕Ц│▐Ц│═Ц│∙Ц│└Ц─┌</font>
 		</TH>
 	</TR>
 	</TBODY>

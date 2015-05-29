@@ -22,7 +22,7 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 ?>
 <TABLE cellSpacing=1 width=<?php printf( "%d",$inputTableWidth ); ?> border=1>
 	<TBODY>
-	<TR><TH colSpan=4>���£ϣգԡ��ã��ӣ�</TH></TR>
+	<TR><TH colSpan=4>ＡＢＯＵＴ　ＣＡＳＴ</TH></TR>
 	<TR>
 		<TH>HANDLE</TH>
 		<TD colSpan=3><INPUT size=50 name=handle></TD>
@@ -54,7 +54,7 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 		<TH>STYLEZ</TH>
 		<TD>
 			<SELECT onchange="calc()" size=1 name=style1>
-			<OPTION selected>��</OPTION>
+			<OPTION selected>−</OPTION>
 			<?php
 				foreach( $styleList as $strec ) {
 					echo "<option>";
@@ -63,12 +63,12 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 				}
 			?>
 			</SELECT>
-			��<INPUT type=radio value=1 name=persona>
-			��<INPUT type=radio value=1 name=key>
+			◎<INPUT type=radio value=1 name=persona>
+			●<INPUT type=radio value=1 name=key>
 		</TD>
 		<TD>
 			<SELECT onchange="calc()" size=1 name=style2>
-			<OPTION selected>��</OPTION>
+			<OPTION selected>−</OPTION>
 			<?php
 				foreach( $styleList as $strec ) {
 					echo "<option>";
@@ -77,12 +77,12 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 				}
 			?>
 			</SELECT>
-			��<INPUT type=radio value=2 name=persona>
-			��<INPUT type=radio value=2 name=key>
+			◎<INPUT type=radio value=2 name=persona>
+			●<INPUT type=radio value=2 name=key>
 		</TD>
 		<TD>
 			<SELECT onchange="calc()" size=1 name=style3>
-			<OPTION selected>��</OPTION>
+			<OPTION selected>−</OPTION>
 			<?php
 				foreach( $styleList as $strec ) {
 					echo "<option>";
@@ -91,20 +91,20 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 				}
 			?>
 			</SELECT>
-			��<INPUT type=radio value=3 name=persona>
-			��<INPUT type=radio value=3 name=key>
+			◎<INPUT type=radio value=3 name=persona>
+			●<INPUT type=radio value=3 name=key>
 		</TD>
 	</TR>
 	<TR>
 		<TH>POWERZ</TH>
 		<TD colSpan=3>
-			Reason<INPUT size=2 name=reason>/<INPUT size=2 name=reason_c>��
-			Passion<INPUT size=2 name=passion>/<INPUT size=2 name=passion_c>��
-			Life<INPUT size=2 name=life>/<INPUT size=2 name=life_c>��
+			Reason<INPUT size=2 name=reason>/<INPUT size=2 name=reason_c>　
+			Passion<INPUT size=2 name=passion>/<INPUT size=2 name=passion_c>　
+			Life<INPUT size=2 name=life>/<INPUT size=2 name=life_c>　
 			Mundane<INPUT size=2 name=mundane>/<INPUT size=2 name=mundane_c><br>
-			��������CombatSpeed<input type=text size=4 name=combatspeed>
+			　　　　CombatSpeed<input type=text size=4 name=combatspeed>
 			<INPUT onclick=recalc_combatspeed() type=button value=ReCalc>
-			����ActionRank<input type=text size=4 name=actionrank>
+			　　ActionRank<input type=text size=4 name=actionrank>
 		</TD>
 	</TR>
 	<TR>
@@ -113,16 +113,16 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 			PHOTO(url):<INPUT size=80 name=photo><BR>
 			ID:<SELECT size=1 name=id><OPTION selected>-</OPTION><OPTION>X</OPTION><OPTION>C-</OPTION><OPTION>C</OPTION><OPTION>B-</OPTION><OPTION>B</OPTION><OPTION>C+</OPTION><OPTION>B+</OPTION><OPTION>A</OPTION><OPTION>A+</OPTION></SELECT>
 			Aj:<INPUT size=2 name=aj>
-			Jender:<SELECT size=1 name=jender><OPTION selected>��</OPTION><OPTION>��</OPTION><OPTION>��</OPTION><OPTION>��</OPTION></SELECT>
+			Jender:<SELECT size=1 name=jender><OPTION selected>−</OPTION><OPTION>♂</OPTION><OPTION>♀</OPTION><OPTION>？</OPTION></SELECT>
 			Heit:<INPUT size=3 name=heit>cm
 			Weit:<INPUT size=3 name=weit>kg
 			Eyez:<INPUT size=3 name=eyez>
 			Hair:<INPUT size=3 name=hair>
 			Skin:<INPUT size=3 name=skin> 
 			Birthday:<INPUT size=4 name=birthday>
-			<TEXTAREA name=story rows=15 cols=80></TEXTAREA><TEXTAREA name=evolution rows=15 cols=40>��ǽ���;徺
-����ǽ����
-��������</TEXTAREA>
+			<TEXTAREA name=story rows=15 cols=80></TEXTAREA><TEXTAREA name=evolution rows=15 cols=40>▼能力値上昇
+▼技能修得
+▼常備化</TEXTAREA>
 		</TD>
 	</TR>
 	<TR>
@@ -134,72 +134,72 @@ else                               echo "<input type=hidden name=S_CATEGORY valu
 	<TR>
 		<TH>LIFEPASS</TH>
 		<TD colSpan=3>
-			<textarea name=lifepass rows=5 cols=80>�м��ʡˡ�
-�и��ʡˡ�
-���ʡˡ�
+			<textarea name=lifepass rows=5 cols=80>出自（）：
+経験（）：
+邂逅（）：
 </textarea>
 		</TD>
 	</TR>
 	<TR>
-		<TH>DATA<BR>�����ݡݡ�<BR>���ݡ��ݡ�<BR>���ݡݡ���<BR>���ݡݡݡ�<BR>�������ݡ�<BR>�����ݡ���<BR>�����ݡݡ�<BR>���ݡ�����<BR>���ݡ��ݡ�<BR>���ݡݡ���<BR>����������<BR>�������ݡ�<BR>�����ݡ���<BR>���ݡ�����<BR>����������</TH>
-		<TD>NomalSkillz��
+		<TH>DATA<BR>１●−−−<BR>１−●−−<BR>１−−●−<BR>１−−−●<BR>２●●−−<BR>２●−●−<BR>２●−−●<BR>２−●●−<BR>２−●−●<BR>２−−●●<BR>３●●●−<BR>３●●−●<BR>３●−●●<BR>３−●●●<BR>４●●●●</TH>
+		<TD>NomalSkillz　
 			<INPUT onclick=n_skill_listup() type=button value=ListUp><BR>
-			<TEXTAREA name=normalskill rows=50 cols=30>�����̵�ǽ
-�����ݡݡ� ����
-�����ݡݡ� �ͷ��
-�����ݡݡ� �γ�
-�����ݡݡ� ��Ǿ
-���ݡݡݡ� ����:
-���ݡ��ݡ� ������
-���ݡ��ݡ� �����
-���ݡ��ݡ� ���
-���ݡݡݡ� �ݽ�:
-���ݡݡ��� ��ư
-���ݡݡ��� �����
-���ݡݡݡ� ���:��
-���ݡݡ��� ��ʼ��
-���ݡݡݡ� ���ϡ�
-���ݡݡݡ� ���ѡ�
-���ݡݡݡ� ��̩
+			<TEXTAREA name=normalskill rows=50 cols=30>▼一般技能
+１●−−− 医療
+１●−−− 射撃★
+１●−−− 知覚
+１●−−− 電脳
+０−−−− 製作:
+１−●−− 心理★
+１−●−− 自我★
+１−●−− 交渉
+０−−−− 芸術:
+１−−●− 運動
+１−−●− 回避★
+０−−−− 操縦:★
+１−−●− 白兵★
+１−−−● 圧力★
+１−−−● 信用★
+１−−−● 隠密
 
-���Ҳ�
-���ݡݡݡ� �Ҳ�:�Ρ��֣�
-���ݡݡݡ� �Ҳ�:����
-���ݡݡݡ� �Ҳ�:����
+▼社会
+１−−−− 社会:Ｎ◎ＶＡ
+１−−−− 社会:選択
+１−−−− 社会:選択
 
-������
-���ݡݡݡ� ����:����
+▼コネ
+１−−−− コネ:選択
 </TEXTAREA>
 		</TD>
-		<TD>StyleSkillz��
+		<TD>StyleSkillz　
 			<INPUT onclick=s_skill_listup() type=button value=ListUp><BR>
 			<TEXTAREA name=superskill rows=50 cols=45></TEXTAREA>
 		</TD>
-		<TD>Outfitz��
+		<TD>Outfitz　
 			<INPUT onclick=add_defequip() type=button value=DefaultEquip><BR>
-			<TEXTAREA name=outfit rows=50 cols=40>�����
+			<TEXTAREA name=outfit rows=50 cols=40>▽武器
 
-���ɶ�
+▽防具
 
-�������С�������
+▽サイバーウェア
 
-���ȥ���
+▽トロン
 
-������������
+▽ヴィークル
 
-������
+▽住居
 
-������¾
+▽その他
 
 </TEXTAREA>
 		</TD>
 	</TR>
 	<TR>
 		<TH colSpan=5>
-			�ѥ����:
+			パスワード:
 			<INPUT type=password size=10 name=pass>
-			<INPUT type=submit value=��Ͽ><br>
-			<font color="red">���ѥ���ɤ�ɬ�����Ϥ��Ƥ���������</font>
+			<INPUT type=submit value=登録><br>
+			<font color="red">※パスワードは必ず入力してください。</font>
 		</TH>
 	</TR>
 	</TBODY>

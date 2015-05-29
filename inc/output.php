@@ -1,7 +1,7 @@
 <?php
 switch( $content ) {
 case 'LIST':
-	// ¥­¥ã¥é¥¯¥¿°ìÍ÷
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ä¸€è¦§
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/list.php" );
@@ -9,7 +9,7 @@ case 'LIST':
 	require( "./inc/html_footer.php" );
 	break;
 case 'ABSTRACT':
-	// ¥­¥ã¥é¥¯¥¿°ìÍ÷
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ä¸€è¦§
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/abstract.php" );
@@ -17,7 +17,7 @@ case 'ABSTRACT':
 	require( "./inc/html_footer.php" );
 	break;
 case 'PROFILE':
-	// ¥­¥ã¥é¥¯¥¿¥Ç¡¼¥¿±ÜÍ÷
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ‡ãƒ¼ã‚¿é–²è¦§
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/profile.php" );
@@ -26,7 +26,7 @@ case 'PROFILE':
 	break;
 
 case 'REGIST':
-	// ¥­¥ã¥é¥¯¥¿¥Ç¡¼¥¿ÅÐÏ¿
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ‡ãƒ¼ã‚¿ç™»éŒ²
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/regist.php" );
@@ -35,7 +35,7 @@ case 'REGIST':
 	break;
 
 case 'EDIT':
-	// ¥­¥ã¥é¥¯¥¿¥Ç¡¼¥¿ÊÔ½¸
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ‡ãƒ¼ã‚¿ç·¨é›†
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/edit.php" );
@@ -44,7 +44,7 @@ case 'EDIT':
 	break;
 
 case 'DUPLICATE':
-	// ¥­¥ã¥é¥¯¥¿¥Ç¡¼¥¿Ê£À½ÊÔ½¸
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ‡ãƒ¼ã‚¿è¤‡è£½ç·¨é›†
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/duplicate.php" );
@@ -53,7 +53,7 @@ case 'DUPLICATE':
 	break;
 
 case 'DELETE':
-	// ¥­¥ã¥é¥¯¥¿ºï½ü³ÎÇ§
+	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿å‰Šé™¤ç¢ºèª
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/delete.php" );
@@ -62,17 +62,17 @@ case 'DELETE':
 	break;
 
 case 'PDFVIEW':
-	// PDF½ÐÎÏ
+	// PDFå‡ºåŠ›
 	require( "./cont/pdfview.php" );
 	break;
 
 case 'XMLPROF':
-	// XML¥¨¥¯¥¹¥Ý¡¼¥È
+	// XMLã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ
 	require( "./cont/xmlprof.php" );
 	break;
 
 case 'ERROR':
-	// ¥¨¥é¡¼
+	// ã‚¨ãƒ©ãƒ¼
 	require( "./inc/html_header.php" );
 	require( "./inc/page_header.php" );
 	require( "./cont/error.php" );

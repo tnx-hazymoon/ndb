@@ -34,7 +34,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>[а╟╔з║╪╔╦]</b>║║<b>╒Ц</b>║║
+	<b>[Е┴█Ц┐ Ц┐╪Ц┌╦]</b>Ц──<b>Б┴╙</b>Ц──
 	<?php if( $CONT_PAGE > 1 ) echo "</a>"; ?>
 	</td>
 	<td align="center">
@@ -52,7 +52,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>╒Д</b>║║<b>[╪║╔з║╪╔╦]</b>
+	<b>Б┴╚</b>Ц──<b>[Ф╛║Ц┐ Ц┐╪Ц┌╦]</b>
 	<?php if( $CONT_PAGE < $page_max ) echo "</a>"; ?>
 	</td>
 </tr>
@@ -89,7 +89,7 @@ if( $CONT_DATA != NULL ) {
 			if( $CONT_FIND['style'] != "" ) echo "&S_STYLE=" . urlencode( $CONT_FIND['style'] );
 			if( $CONT_FIND['category'] != "" ) echo "&S_CATEGORY=" . urlencode( $CONT_FIND['category'] );
 			?>"><?php echo htmlspecialchars( $rec['player'] ); ?></A>
-		</SPAN>║║║й╥п╦Ёею║╖<?php echo htmlspecialchars( $rec['exp'] ); ?>║к<BR>
+		</SPAN>Ц──О╪┬Г╣▄И╗⌠Г┌╧О╪ <?php echo htmlspecialchars( $rec['exp'] ); ?>О╪┴<BR>
 		<?php echo htmlspecialchars( style2format( (int)$rec['style1'],(int)$rec['style2'],(int)$rec['style3'],(int)$rec['persona'],(int)$rec['keyst'] ) ); ?>
 		<font size="-1">( <?php
 		for( $pc = 0;($pc < $cateList['num'])&&($cateList[$pc]['id'] != $rec['category']);$pc++ );
@@ -122,7 +122,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>[а╟╔з║╪╔╦]</b>║║<b>╒Ц</b>║║
+	<b>[Е┴█Ц┐ Ц┐╪Ц┌╦]</b>Ц──<b>Б┴╙</b>Ц──
 	<?php if( $CONT_PAGE > 1 ) echo "</a>"; ?>
 	</td>
 	<td align="center">
@@ -140,7 +140,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>╒Д</b>║║<b>[╪║╔з║╪╔╦]</b>
+	<b>Б┴╚</b>Ц──<b>[Ф╛║Ц┐ Ц┐╪Ц┌╦]</b>
 	<?php if( $CONT_PAGE < $page_max ) echo "</a>"; ?>
 	</td>
 </tr>
@@ -151,7 +151,7 @@ if( $CONT_DATA != NULL ) {
 }
 else {
 	echo "<center>";
-	echo htmlspecialchars( "╔╜╔Ц╔И╔╞╔©╓╛епо©╓╣╓Л╓ф╓╓╓ч╓╩╓С║ё\n" );
+	echo htmlspecialchars( "Ц┌╜Ц┐ёЦ┐╘Ц┌╞Ц┌©Ц│▄Г≥╩И▄╡Ц│∙Ц┌▄Ц│╕Ц│└Ц│╬Ц│⌡Ц┌⌠Ц─┌\n" );
 	echo "</center>\n";
 }
 ?>

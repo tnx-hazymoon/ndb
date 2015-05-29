@@ -1,12 +1,12 @@
 <HTML>
 
 <HEAD>
-	<TITLE>£Î¡ý£Ö£Á¥­¥ã¥é¥Ç¡¼¥¿¥Ù¡¼¥¹</TITLE>
+	<TITLE>ï¼®â—Žï¼¶ï¼¡ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹</TITLE>
 	<META content=noindex name=robots>
 	<META http-equiv=Content-Type content="text/html; charset=EUC-JP">
 	<link rel="stylesheet" type="text/css" href="ndb_style.css">
 
-	<META content="N¡ýVA Character-Database system" name=GENERATOR>
+	<META content="Nâ—ŽVA Character-Database system" name=GENERATOR>
 </HEAD>
 
 <BODY text=#000000 vLink=#00006a aLink=#30a030 link=#008000 bgColor=#ffffff>

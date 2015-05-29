@@ -1,13 +1,13 @@
-ƒg[ƒLƒ‡[‚m‚u‚`@ƒLƒƒƒ‰ƒNƒ^ƒf[ƒ^ƒx[ƒX
+ãƒˆãƒ¼ã‚­ãƒ§ãƒ¼ï¼®â—Žï¼¶ï¼¡ã€€ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹
 
 ----------------------------------------
-¥‚Í‚¶‚ß‚É
+â–¼ã¯ã˜ã‚ã«
 
-–{ƒVƒXƒeƒ€‚ÍAƒg[ƒLƒ‡[‚m‚u‚` THE AXLERATION ‚ÅŽg—p‚·‚éƒLƒƒƒ‰ƒNƒ^‚ðŠÇ—‚·‚é‚½‚ß‚ÌƒEƒFƒuƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Å‚·B
+æœ¬ã‚·ã‚¹ãƒ†ãƒ ã¯ã€ãƒˆãƒ¼ã‚­ãƒ§ãƒ¼ï¼®â—Žï¼¶ï¼¡ THE AXLERATION ã§ä½¿ç”¨ã™ã‚‹ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ã‚’ç®¡ç†ã™ã‚‹ãŸã‚ã®ã‚¦ã‚§ãƒ–ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã§ã™ã€‚
 
 
 ----------------------------------------
-¥ƒVƒXƒeƒ€\¬
+â–¼ã‚·ã‚¹ãƒ†ãƒ æ§‹æˆ
 
 [ndb]
 	ndb.php
@@ -44,88 +44,88 @@
 
 
 ----------------------------------------
-¥‘O’ñ
+â–¼å‰æ
 
-–{ƒVƒXƒeƒ€‚ÍPHPƒXƒNƒŠƒvƒg‚Å\¬‚³‚ê‚Ä‚¢‚Ü‚·B
-PHP5ˆÈã‚ðŽÀs‚·‚é‚±‚Æ‚Ì‚Å‚«‚éƒEƒFƒuƒT[ƒo‚ðŒä—pˆÓ‚­‚¾‚³‚¢B
+æœ¬ã‚·ã‚¹ãƒ†ãƒ ã¯PHPã‚¹ã‚¯ãƒªãƒ—ãƒˆã§æ§‹æˆã•ã‚Œã¦ã„ã¾ã™ã€‚
+PHP5ä»¥ä¸Šã‚’å®Ÿè¡Œã™ã‚‹ã“ã¨ã®ã§ãã‚‹ã‚¦ã‚§ãƒ–ã‚µãƒ¼ãƒã‚’å¾¡ç”¨æ„ãã ã•ã„ã€‚
 
-DBƒGƒ“ƒWƒ“‚ÍSQLite‚ðŽg—p‚µ‚Ä‚¨‚è‚Ü‚·‚Ì‚ÅADBƒT[ƒo‚Í•K—v‚ ‚è‚Ü‚¹‚ñB
+DBã‚¨ãƒ³ã‚¸ãƒ³ã¯SQLiteã‚’ä½¿ç”¨ã—ã¦ãŠã‚Šã¾ã™ã®ã§ã€DBã‚µãƒ¼ãƒã¯å¿…è¦ã‚ã‚Šã¾ã›ã‚“ã€‚
 
-‚¨Žg‚¢‚ÌPHP‚ÅA
-	ƒ}ƒ‹ƒ`ƒoƒCƒg•¶Žš—ñŠÖ”
-	SQLiteŠÖ”iSQLite3ƒNƒ‰ƒX‚Æ‚ÍˆÙ‚È‚è‚Ü‚·Bj
-‚ªŽg—p‚Å‚«‚é‚±‚Æ‚ðŠm”F‚µ‚Ä‚­‚¾‚³‚¢B
+ãŠä½¿ã„ã®PHPã§ã€
+	ãƒžãƒ«ãƒãƒã‚¤ãƒˆæ–‡å­—åˆ—é–¢æ•°
+	SQLiteé–¢æ•°ï¼ˆSQLite3ã‚¯ãƒ©ã‚¹ã¨ã¯ç•°ãªã‚Šã¾ã™ã€‚ï¼‰
+ãŒä½¿ç”¨ã§ãã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚
 
-PDFì¬‚Ì‚½‚ßAFPDFƒ‰ƒCƒuƒ‰ƒŠ‚Éjapaneseƒpƒbƒ`‚ð“K—p‚µ‚½”Å‚ðŽg—p‚µ‚Ä‚¢‚Ü‚·B
-FPDFŒöŽ®ƒy[ƒW‚©‚çFPDF–{‘Ì‚Æjapaneseƒpƒbƒ`‚ð“üŽè‚µA“K“–‚ÈƒtƒHƒ‹ƒ_‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚­‚¾‚³‚¢B
+PDFä½œæˆã®ãŸã‚ã€FPDFãƒ©ã‚¤ãƒ–ãƒ©ãƒªã«japaneseãƒ‘ãƒƒãƒã‚’é©ç”¨ã—ãŸç‰ˆã‚’ä½¿ç”¨ã—ã¦ã„ã¾ã™ã€‚
+FPDFå…¬å¼ãƒšãƒ¼ã‚¸ã‹ã‚‰FPDFæœ¬ä½“ã¨japaneseãƒ‘ãƒƒãƒã‚’å…¥æ‰‹ã—ã€é©å½“ãªãƒ•ã‚©ãƒ«ãƒ€ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãã ã•ã„ã€‚
 
-	¦FPDFŒöŽ®ƒTƒCƒg
+	â€»FPDFå…¬å¼ã‚µã‚¤ãƒˆ
 	http://www.fpdf.org/
 
 ----------------------------------------
-¥ƒCƒ“ƒXƒg[ƒ‹
+â–¼ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
-‚»‚Ì‚Pjndb/inc/define.php‚ÌC³
-	3s–Ú: SQLite‚ÅŽg—p‚·‚éDBƒtƒ@ƒCƒ‹‚ðŽû—e‚·‚éƒtƒHƒ‹ƒ_–¼‚ð‹Lq‚·‚éBi––”ö‚É'/'‚Í•t‚¯‚È‚¢‚±‚Æj
-	4s–Ú: SQLite‚ÅŽg—p‚·‚éDBƒtƒ@ƒCƒ‹–¼‚ð‹Lq‚·‚éB
-	8s–Ú: ŠÇ—ŽÒ—pƒpƒXƒ[ƒh‚ð•ÏX‚·‚éB
-	24s–Ú: eƒTƒCƒg‚ÌURL‚ð‹Lq‚·‚éB
-	31s–Ú: FDPF‚ðƒCƒ“ƒXƒg[ƒ‹‚µ‚½ƒtƒHƒ‹ƒ_–¼‚ð‹Lq‚·‚éBi––”ö‚É'/'‚Í•t‚¯‚È‚¢‚±‚Æj
+ãã®ï¼‘ï¼‰ndb/inc/define.phpã®ä¿®æ­£
+	3è¡Œç›®: SQLiteã§ä½¿ç”¨ã™ã‚‹DBãƒ•ã‚¡ã‚¤ãƒ«ã‚’åŽå®¹ã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€åã‚’è¨˜è¿°ã™ã‚‹ã€‚ï¼ˆæœ«å°¾ã«'/'ã¯ä»˜ã‘ãªã„ã“ã¨ï¼‰
+	4è¡Œç›®: SQLiteã§ä½¿ç”¨ã™ã‚‹DBãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¨˜è¿°ã™ã‚‹ã€‚
+	8è¡Œç›®: ç®¡ç†è€…ç”¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã™ã‚‹ã€‚
+	24è¡Œç›®: è¦ªã‚µã‚¤ãƒˆã®URLã‚’è¨˜è¿°ã™ã‚‹ã€‚
+	31è¡Œç›®: FDPFã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸãƒ•ã‚©ãƒ«ãƒ€åã‚’è¨˜è¿°ã™ã‚‹ã€‚ï¼ˆæœ«å°¾ã«'/'ã¯ä»˜ã‘ãªã„ã“ã¨ï¼‰
 
-‚»‚Ì‚Qjcategory.html‚ÌC³
-	211s–Ú: eƒTƒCƒg‚ÌURL‚ð‹Lq‚·‚éB
+ãã®ï¼’ï¼‰category.htmlã®ä¿®æ­£
+	211è¡Œç›®: è¦ªã‚µã‚¤ãƒˆã®URLã‚’è¨˜è¿°ã™ã‚‹ã€‚
 
-‚»‚Ì‚RjDBƒe[ƒuƒ‹ì¬
-	ƒuƒ‰ƒEƒU‚Å http://(ndbˆêŽ®‚ðƒCƒ“ƒXƒg[ƒ‹‚µ‚½ƒpƒX)/ndb/ndb_install.php ‚ðŒÄ‚Ño‚µ‚Ä‚­‚¾‚³‚¢B
-	ndb/inc/define.php ‚ÉÝ’è‚µ‚½ŠÇ—ŽÒ—pƒpƒXƒ[ƒh‚ð“ü—Í‚µA[ŽÀs]ƒ{ƒ^ƒ“‚ðƒNƒŠƒbƒN‚µ‚Ü‚·B
-	uDBƒtƒ@ƒCƒ‹‚ðì¬‚µ‚Ü‚µ‚½Bv‚Æ•\Ž¦‚³‚ê‚½‚çŠ®—¹‚Å‚·B
+ãã®ï¼“ï¼‰DBãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
+	ãƒ–ãƒ©ã‚¦ã‚¶ã§ http://(ndbä¸€å¼ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸãƒ‘ã‚¹)/ndb/ndb_install.php ã‚’å‘¼ã³å‡ºã—ã¦ãã ã•ã„ã€‚
+	ndb/inc/define.php ã«è¨­å®šã—ãŸç®¡ç†è€…ç”¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã€[å®Ÿè¡Œ]ãƒœã‚¿ãƒ³ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¾ã™ã€‚
+	ã€ŒDBãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã—ãŸã€‚ã€ã¨è¡¨ç¤ºã•ã‚ŒãŸã‚‰å®Œäº†ã§ã™ã€‚
 
-	¦ì¬Œã‚ÍA‚¢‚½‚¸‚ç–hŽ~‚Ì‚½‚ß ndb_install.php ‚ðíœ‚µ‚Ä‚¨‚­‚±‚Æ‚ð‚¨Š©‚ß‚µ‚Ü‚·B
-
-
-----------------------------------------
-¥“®ìŠm”F
-
-ƒuƒ‰ƒEƒU‚Å http://(ndbˆêŽ®‚ðƒCƒ“ƒXƒg[ƒ‹‚µ‚½ƒpƒX)/ndb/ndb.php ‚ðŒÄ‚Ño‚µ‚Ä‚­‚¾‚³‚¢B
+	â€»ä½œæˆå¾Œã¯ã€ã„ãŸãšã‚‰é˜²æ­¢ã®ãŸã‚ ndb_install.php ã‚’å‰Šé™¤ã—ã¦ãŠãã“ã¨ã‚’ãŠå‹§ã‚ã—ã¾ã™ã€‚
 
 
 ----------------------------------------
-¥’˜ìŒ 
+â–¼å‹•ä½œç¢ºèª
 
-–{ƒVƒXƒeƒ€‚Ì’˜ìŒ ‚Íu‚æ‚Á‚¿v‚ª•ÛŽ‚µ‚Ä‚¨‚è‚Ü‚·‚ªA‰ü‘¢‚âÄ”z•z‚ð–W‚°‚é‚à‚Ì‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
-‚½‚¾‚µAÄ”z•z‚ÌÛA–{ƒhƒLƒ…ƒƒ“ƒg‚Í‰ü•Ï‚¹‚¸A‚»‚Ì‚Ü‚Ü“¯«‚µ‚Ä‚­‚¾‚³‚¢B
-‰ü‘¢“™‚Å–{ƒhƒLƒ…ƒƒ“ƒg‚Ì“à—e‚É•ÏX‚Ì•K—v‚ª¶‚¶‚½ê‡‚àA•ÏX‚ð”½‰f‚µ‚½ƒhƒLƒ…ƒƒ“ƒg‚ð•Ê‚É—pˆÓ‚µ‚Ä‚­‚¾‚³‚¢B
+ãƒ–ãƒ©ã‚¦ã‚¶ã§ http://(ndbä¸€å¼ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸãƒ‘ã‚¹)/ndb/ndb.php ã‚’å‘¼ã³å‡ºã—ã¦ãã ã•ã„ã€‚
 
 
-–{ƒVƒXƒeƒ€‚Ì‰æ–ÊƒfƒUƒCƒ“‚ÍAuƒKƒjƒƒf‚Â‚¿‚Ì‚±vŽ‚ÌŠJ”­‚³‚ê‚½u‚m‚u‚`ƒLƒƒƒ‰ƒf[ƒ^ƒx[ƒX‚b‚f‚hv‚ðƒx[ƒX‚ÉŠJ”­‚¢‚½‚µ‚Ü‚µ‚½B
+----------------------------------------
+â–¼è‘—ä½œæ¨©
 
-ƒKƒjƒƒf‚²‚·‚Ø‚ç[‚¸
+æœ¬ã‚·ã‚¹ãƒ†ãƒ ã®è‘—ä½œæ¨©ã¯ã€Œã‚ˆã£ã¡ã€ãŒä¿æŒã—ã¦ãŠã‚Šã¾ã™ãŒã€æ”¹é€ ã‚„å†é…å¸ƒã‚’å¦¨ã’ã‚‹ã‚‚ã®ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+ãŸã ã—ã€å†é…å¸ƒã®éš›ã€æœ¬ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã¯æ”¹å¤‰ã›ãšã€ãã®ã¾ã¾åŒæ¢±ã—ã¦ãã ã•ã„ã€‚
+æ”¹é€ ç­‰ã§æœ¬ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®å†…å®¹ã«å¤‰æ›´ã®å¿…è¦ãŒç”Ÿã˜ãŸå ´åˆã‚‚ã€å¤‰æ›´ã‚’åæ˜ ã—ãŸãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚’åˆ¥ã«ç”¨æ„ã—ã¦ãã ã•ã„ã€‚
+
+
+æœ¬ã‚·ã‚¹ãƒ†ãƒ ã®ç”»é¢ãƒ‡ã‚¶ã‚¤ãƒ³ã¯ã€ã€Œã‚¬ãƒ‹ãƒ¡ãƒ‡ã¤ã¡ã®ã“ã€æ°ã®é–‹ç™ºã•ã‚ŒãŸã€Œï¼®â—Žï¼¶ï¼¡ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ï¼£ï¼§ï¼©ã€ã‚’ãƒ™ãƒ¼ã‚¹ã«é–‹ç™ºã„ãŸã—ã¾ã—ãŸã€‚
+
+ã‚¬ãƒ‹ãƒ¡ãƒ‡ã”ã™ãºã‚‰ãƒ¼ãš
 http://www.aurora.dti.ne.jp/~motacila/gospel/index.html
 
 
-uƒg[ƒLƒ‡[‚m‚u‚` THE AXLERATIONv‚Í—LŒÀ‰ïŽÐƒtƒ@[ƒC[ƒXƒgEƒAƒ~ƒ…[ƒYƒƒ“ƒgEƒŠƒT[ƒ`‹y‚Ñ—LŒÀ‰ïŽÐƒQ[ƒ€EƒtƒB[ƒ‹ƒh‚Ì’˜ì•¨‚Å‚·B
+ã€Œãƒˆãƒ¼ã‚­ãƒ§ãƒ¼ï¼®â—Žï¼¶ï¼¡ THE AXLERATIONã€ã¯æœ‰é™ä¼šç¤¾ãƒ•ã‚¡ãƒ¼ã‚¤ãƒ¼ã‚¹ãƒˆãƒ»ã‚¢ãƒŸãƒ¥ãƒ¼ã‚ºãƒ¡ãƒ³ãƒˆãƒ»ãƒªã‚µãƒ¼ãƒåŠã³æœ‰é™ä¼šç¤¾ã‚²ãƒ¼ãƒ ãƒ»ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®è‘—ä½œç‰©ã§ã™ã€‚
 
-F.E.A.R.ŒöŽ®ƒTƒCƒg
+F.E.A.R.å…¬å¼ã‚µã‚¤ãƒˆ
 http://www.fear.co.jp/
 
-ƒg[ƒLƒ‡[‚m‚u‚` THE ALERATION ŒöŽ®ƒTƒCƒg
+ãƒˆãƒ¼ã‚­ãƒ§ãƒ¼ï¼®â—Žï¼¶ï¼¡ THE ALERATION å…¬å¼ã‚µã‚¤ãƒˆ
 http://www.fear.co.jp/novax/index.htm
 
 
 
 ----------------------------------------
-¥ŽÓŽ«
+â–¼è¬è¾ž
 
-Šˆ“®‚Ìê‚ð’ñ‹Ÿ‚µ‚Ä‚¢‚½‚¾‚¢‚Ä‚¢‚és“ïU•s—Žt‚Á!!!‚Ì—gg—´Ž‚ð‚Í‚¶‚ß‚Æ‚·‚éƒvƒŒƒCƒ„[”Ž‚É[‚­Š´ŽÓ‚¢‚½‚µ‚Ü‚·B
+æ´»å‹•ã®å ´ã‚’æä¾›ã—ã¦ã„ãŸã ã„ã¦ã„ã‚‹ã€Šé›£æ”»ä¸è½ã€‹ã£!!!ã®æšç´…é¾æ°ã‚’ã¯ã˜ã‚ã¨ã™ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼è«¸æ°ã«æ·±ãæ„Ÿè¬ã„ãŸã—ã¾ã™ã€‚
 
-s“ïU•s—Žt‚Á!!!
+ã€Šé›£æ”»ä¸è½ã€‹ã£!!!
 http://www.huraku.com/
 
 
 
 ----------------------------------------
-2013”N9ŒŽ11“ú ‚æ‚Á‚¿
+2013å¹´9æœˆ11æ—¥ ã‚ˆã£ã¡
 
-‚æ‚Á‚¿'s ‚m‚u‚`ƒy[ƒW
+ã‚ˆã£ã¡'s ï¼®â—Žï¼¶ï¼¡ãƒšãƒ¼ã‚¸
 http://navyleague.jp/nova/
 

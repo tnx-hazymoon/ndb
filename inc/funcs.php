@@ -1,6 +1,6 @@
 <?php
 /*
-	ÈÆÍÑ´Ø¿ô·²
+	æ±ç”¨é–¢æ•°ç¾¤
 */
 
 $dbID = (-1);
@@ -30,7 +30,7 @@ function dbgLog( $str )
 	if( file_exists( $log ) == TRUE && $info['max'] > 0 ) {
 		$fst = stat( $log );
 		if( $fst['size'] > $info['max'] ) {
-			// ¥Õ¥¡¥¤¥ëÌ¾¤ò¡¢ÆüÉÕ¡¦»ş¹ï¤òÉÕÍ¿¤·¤¿¤â¤Î¤ËÊÑ¹¹¤¹¤ë¡£
+			// ãƒ•ã‚¡ã‚¤ãƒ«åã‚’ã€æ—¥ä»˜ãƒ»æ™‚åˆ»ã‚’ä»˜ä¸ã—ãŸã‚‚ã®ã«å¤‰æ›´ã™ã‚‹ã€‚
 			$stamp = date( "Ymd-His" );
 			rename( $log,$log . "." . $stamp );
 		}
@@ -68,7 +68,7 @@ function dbgLog( $str )
 
 
 /*%FNC--------------------------------
- Function	DBÀÜÂ³
+ Function	DBæ¥ç¶š
  Process	
  Result		
  Memo		
@@ -78,19 +78,19 @@ function db_open()
 	global	$dbID;
 	global	$ndbDB;
 
-	// ¥Ç¡¼¥¿¥Ù¡¼¥¹¤Ø¤ÎÀÜÂ³
+	// ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã¸ã®æ¥ç¶š
 	if( $dbID = sqlite_open( $ndbDB['file'] ) ) {
 //		create_table();
 		return TRUE;
 	}
 	else {
-		// connect¼ºÇÔ
+		// connectå¤±æ•—
 		return FALSE;
 	}
 }
 
 /*%FNC--------------------------------
- Function	DB²òÊü
+ Function	DBè§£æ”¾
  Process	
  Result		
  Memo		
@@ -104,13 +104,13 @@ function db_close()
 }
 
 /*%FNC--------------------------------
- Function	HTML¥¨¥¹¥±¡¼¥×½èÍı¤ÈURL¤ÎÃê½Ğ¡¦¥¢¥ó¥«¡¼¥¿¥°ÀßÃÖ
+ Function	HTMLã‚¨ã‚¹ã‚±ãƒ¼ãƒ—å‡¦ç†ã¨URLã®æŠ½å‡ºãƒ»ã‚¢ãƒ³ã‚«ãƒ¼ã‚¿ã‚°è¨­ç½®
  Process	
- Result		ÊÔ½¸·ë²Ì¡Êstring·¿¡Ë
+ Result		ç·¨é›†çµæœï¼ˆstringå‹ï¼‰
  Memo		
  ------------------------------------*/
 function line_output(
-	$line	// ½ĞÎÏÊ¸»úÎó¡Êstring·¿¡Ë
+	$line	// å‡ºåŠ›æ–‡å­—åˆ—ï¼ˆstringå‹ï¼‰
 )
 {
 	global	$color_refer;
@@ -209,10 +209,10 @@ function line_output(
  Function	
  Process	
  Result		
- Memo		¶èÀÚ¤ê¤Ê¤·¤Î¿ô»úÎó¤òÆüÉÕ¤È¤·¤Æ¸¡¾Ú¤·¡¢½ñ¼°¤òÀ°¤¨¤ÆÊÖ¤¹¡£
-			YYYYMMDD ¢ª YYYY-MM-DD
-			YYYYMM   ¢ª YYYY-MM
-			YYYY     ¢ª YYYY
+ Memo		åŒºåˆ‡ã‚Šãªã—ã®æ•°å­—åˆ—ã‚’æ—¥ä»˜ã¨ã—ã¦æ¤œè¨¼ã—ã€æ›¸å¼ã‚’æ•´ãˆã¦è¿”ã™ã€‚
+			YYYYMMDD â†’ YYYY-MM-DD
+			YYYYMM   â†’ YYYY-MM
+			YYYY     â†’ YYYY
  ------------------------------------*/
 function str2date(
 	$str
@@ -247,10 +247,10 @@ function str2date(
  Function	
  Process	
  Result		
- Memo		¸¡º÷¥Õ¥©¡¼¥à¤Î¥Ç¡¼¥¿¤«¤é¡¢¸¡º÷»ØÄê¥³¡¼¥ÉÊ¸¤òºîÀ®¤¹¤ë
+ Memo		æ¤œç´¢ãƒ•ã‚©ãƒ¼ãƒ ã®ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ã€æ¤œç´¢æŒ‡å®šã‚³ãƒ¼ãƒ‰æ–‡ã‚’ä½œæˆã™ã‚‹
  ------------------------------------*/
 function form2find(
-	$form	// ¸¡º÷¥Õ¥©¡¼¥à¥Ç¡¼¥¿
+	$form	// æ¤œç´¢ãƒ•ã‚©ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿
 )
 {
 	$wh = "where ( ";
@@ -285,7 +285,7 @@ function form2find(
  Memo		
  ------------------------------------*/
 function strchk_userid(
-	$uid	// ¥¢¥«¥¦¥ó¥ÈÌ¾
+	$uid	// ã‚¢ã‚«ã‚¦ãƒ³ãƒˆå
 )
 {
 	if( $uid == "" ) return FALSE;
@@ -311,7 +311,7 @@ function strchk_userid(
  Memo		
  ------------------------------------*/
 function strchk_passwd(
-	$pass	// ¥Ñ¥¹¥ï¡¼¥É
+	$pass	// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 )
 {
 	if( $pass == "" ) return FALSE;
@@ -340,7 +340,7 @@ function strchk_passwd(
  Function	
  Process	
  Result		
- Memo		¥¿¥í¥Ã¥ÈÈÖ¹æ¤«¤é¥¹¥¿¥¤¥ëÌ¾¤òÊÖ¤¹
+ Memo		ã‚¿ãƒ­ãƒƒãƒˆç•ªå·ã‹ã‚‰ã‚¹ã‚¿ã‚¤ãƒ«åã‚’è¿”ã™
  ------------------------------------*/
 function num2style(
 	$code,
@@ -349,7 +349,7 @@ function num2style(
 {
 	global $styleList;
 
-	$st = array( "¡İ", "-", "¡İ" );
+	$st = array( "âˆ’", "-", "âˆ’" );
 
 	foreach( $styleList as $rec ) {
 		if( $code == $rec['no'] ) {
@@ -369,7 +369,7 @@ function num2style(
  Function	
  Process	
  Result		
- Memo		¥¹¥¿¥¤¥ëÌ¾¤«¤é¥¿¥í¥Ã¥ÈÈÖ¹æ¤òÊÖ¤¹
+ Memo		ã‚¹ã‚¿ã‚¤ãƒ«åã‹ã‚‰ã‚¿ãƒ­ãƒƒãƒˆç•ªå·ã‚’è¿”ã™
  ------------------------------------*/
 function style2num(
 	$name
@@ -392,7 +392,7 @@ function style2num(
  Function	
  Process	
  Result		
- Memo		¥¹¥¿¥¤¥ëÈÖ¹æ£³¤Ä¤«¤é¡¢¥¹¥¿¥¤¥ëÉ½µ­¤òÀ¸À®¤¹¤ë¡£
+ Memo		ã‚¹ã‚¿ã‚¤ãƒ«ç•ªå·ï¼“ã¤ã‹ã‚‰ã€ã‚¹ã‚¿ã‚¤ãƒ«è¡¨è¨˜ã‚’ç”Ÿæˆã™ã‚‹ã€‚
  ------------------------------------*/
 function style2format(
 	$style1,
@@ -406,8 +406,8 @@ function style2format(
 
 	$out .= num2style( $style1,0 );
 	if( $style1 != $style2 ) {
-		if( $persona == 1 ) $out .= "¡ı";
-		if( $key == 1 ) $out .= "¡ü";
+		if( $persona == 1 ) $out .= "â—";
+		if( $key == 1 ) $out .= "â—";
 		$out .= " , ";
 	}
 	else $out .= "=";
@@ -415,16 +415,16 @@ function style2format(
 	$out .= num2style( $style2,0 );
 	if( $style1 == $style2 ) {
 		if( $style2 != $style3 ) {
-			if( $persona == 1 || $persona == 2 ) $out .= "¡ı";
-			if( $key == 1 || $key == 2 ) $out .= "¡ü";
+			if( $persona == 1 || $persona == 2 ) $out .= "â—";
+			if( $key == 1 || $key == 2 ) $out .= "â—";
 			$out .= " , ";
 		}
 		else $out .= "=";
 	}
 	else {
 		if( $style2 != $style3 ) {
-			if( $persona == 2 ) $out .= "¡ı";
-			if( $key == 2 ) $out .= "¡ü";
+			if( $persona == 2 ) $out .= "â—";
+			if( $key == 2 ) $out .= "â—";
 			$out .= " , ";
 		}
 		else $out .= "=";
@@ -432,16 +432,16 @@ function style2format(
 
 	$out .= num2style( $style3,0 );
 	if( $style1 == $style2 && $style2 == $style3 ) {
-		$out .= "¡ı¡ü";
+		$out .= "â—â—";
 	}
 	else {
 		if( $style2 == $style3 ) {
-			if( $persona == 2 || $persona == 3 ) $out .= "¡ı";
-			if( $key == 2 || $key == 3 ) $out .= "¡ü";
+			if( $persona == 2 || $persona == 3 ) $out .= "â—";
+			if( $key == 2 || $key == 3 ) $out .= "â—";
 		}
 		else {
-			if( $persona == 3 ) $out .= "¡ı";
-			if( $key == 3 ) $out .= "¡ü";
+			if( $persona == 3 ) $out .= "â—";
+			if( $key == 3 ) $out .= "â—";
 		}
 	}
 
@@ -510,47 +510,47 @@ function get_registform()
 
 	return $data;
 /*
-¥Õ¥©¡¼¥à¤«¤é¤ÎÆşÎÏ¥Ç¡¼¥¿
+ãƒ•ã‚©ãƒ¼ãƒ ã‹ã‚‰ã®å…¥åŠ›ãƒ‡ãƒ¼ã‚¿
 
-handle		¥Ï¥ó¥É¥ë¡¢¥­¥ã¥é¥¯¥¿Ì¾
-job			¥İ¥¹¥È
-player		¥×¥ì¥¤¥ä¡¼Ì¾
-style1		¥¹¥¿¥¤¥ë¡Ê¥¹¥¿¥¤¥ëÌ¾¡Ë
-style2		   ¡·
-style3		   ¡·
-persona		¥Ú¥ë¥½¥Ê¡Ê£±¡Á£³¡Ë
-key			¥­¡¼¡Ê£±¡Á£³¡Ë
-reason		ÍıÀ­Ç½ÎÏÃÍ¡Ê¿ô»ú¡Ë
-reason_c	ÍıÀ­À©¸æÃÍ¡Ê¿ô»ú¡Ë
-passion		´¶¾ğÇ½ÎÏÃÍ¡Ê¿ô»ú¡Ë
-passion_c	´¶¾ğÀ©¸æÃÍ¡Ê¿ô»ú¡Ë
-life		À¸Ì¿Ç½ÎÏÃÍ¡Ê¿ô»ú¡Ë
-life_c		À¸Ì¿À©¸æÃÍ¡Ê¿ô»ú¡Ë
-mundane		³°³¦Ç½ÎÏÃÍ¡Ê¿ô»ú¡Ë
-mundane_c	³°³¦À©¸æÃÍ¡Ê¿ô»ú¡Ë
-combatspeed	CombatSpeed¡Ê¿ô»ú¡Ë
-actionrank	ActionRank¡Ê¿ô»ú¡Ë
-lifepass	¥é¥¤¥Õ¥Ñ¥¹¡ÊÊ¸»úÎó¡Ë
-photo		¥¤¥á¡¼¥¸¥Ç¡¼¥¿URL
-id			»ÔÌ±ID
-aj			Ç¯Îğ¡ÊÊ¸»úÎó¡Ë
-jender		À­ÊÌ
-heit		¿ÈÄ¹¡ÊÊ¸»úÎó¡Ë
-weit		ÂÎ½Å¡ÊÊ¸»úÎó¡Ë
-eyez		Æ·¿§
-hair		È±¿§
-skin		È©¿§
-birthday	ÃÂÀ¸Æü¡ÊÊ¸»úÎó¡Ë
-story		¥×¥í¥Õ¥¡¥¤¥ë
-evolution	·Ğ¸³ÃÍÇÛÊ¬Åù¡¢¥³¥á¥ó¥È
-exp			·Ğ¸³ÃÍ¡ÊÊ¸»úÎó¡Ë
-normalskill	°ìÈÌµ»Ç½¡Ê²ş¹Ô¤ò´Ş¤àÊ¸»úÎó¡Ë
-superskill	ÆÃ¼ìµ»Ç½¡Ê²ş¹Ô¤ò´Ş¤àÊ¸»úÎó¡Ë
-outfit		½»µï¡¢ÁõÈ÷Åù¡Ê²ş¹Ô¤ò´Ş¤àÊ¸»úÎó¡Ë
+handle		ãƒãƒ³ãƒ‰ãƒ«ã€ã‚­ãƒ£ãƒ©ã‚¯ã‚¿å
+job			ãƒã‚¹ãƒˆ
+player		ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼å
+style1		ã‚¹ã‚¿ã‚¤ãƒ«ï¼ˆã‚¹ã‚¿ã‚¤ãƒ«åï¼‰
+style2		   ã€ƒ
+style3		   ã€ƒ
+persona		ãƒšãƒ«ã‚½ãƒŠï¼ˆï¼‘ã€œï¼“ï¼‰
+key			ã‚­ãƒ¼ï¼ˆï¼‘ã€œï¼“ï¼‰
+reason		ç†æ€§èƒ½åŠ›å€¤ï¼ˆæ•°å­—ï¼‰
+reason_c	ç†æ€§åˆ¶å¾¡å€¤ï¼ˆæ•°å­—ï¼‰
+passion		æ„Ÿæƒ…èƒ½åŠ›å€¤ï¼ˆæ•°å­—ï¼‰
+passion_c	æ„Ÿæƒ…åˆ¶å¾¡å€¤ï¼ˆæ•°å­—ï¼‰
+life		ç”Ÿå‘½èƒ½åŠ›å€¤ï¼ˆæ•°å­—ï¼‰
+life_c		ç”Ÿå‘½åˆ¶å¾¡å€¤ï¼ˆæ•°å­—ï¼‰
+mundane		å¤–ç•Œèƒ½åŠ›å€¤ï¼ˆæ•°å­—ï¼‰
+mundane_c	å¤–ç•Œåˆ¶å¾¡å€¤ï¼ˆæ•°å­—ï¼‰
+combatspeed	CombatSpeedï¼ˆæ•°å­—ï¼‰
+actionrank	ActionRankï¼ˆæ•°å­—ï¼‰
+lifepass	ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹ï¼ˆæ–‡å­—åˆ—ï¼‰
+photo		ã‚¤ãƒ¡ãƒ¼ã‚¸ãƒ‡ãƒ¼ã‚¿URL
+id			å¸‚æ°‘ID
+aj			å¹´é½¢ï¼ˆæ–‡å­—åˆ—ï¼‰
+jender		æ€§åˆ¥
+heit		èº«é•·ï¼ˆæ–‡å­—åˆ—ï¼‰
+weit		ä½“é‡ï¼ˆæ–‡å­—åˆ—ï¼‰
+eyez		ç³è‰²
+hair		é«ªè‰²
+skin		è‚Œè‰²
+birthday	èª•ç”Ÿæ—¥ï¼ˆæ–‡å­—åˆ—ï¼‰
+story		ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«
+evolution	çµŒé¨“å€¤é…åˆ†ç­‰ã€ã‚³ãƒ¡ãƒ³ãƒˆ
+exp			çµŒé¨“å€¤ï¼ˆæ–‡å­—åˆ—ï¼‰
+normalskill	ä¸€èˆ¬æŠ€èƒ½ï¼ˆæ”¹è¡Œã‚’å«ã‚€æ–‡å­—åˆ—ï¼‰
+superskill	ç‰¹æ®ŠæŠ€èƒ½ï¼ˆæ”¹è¡Œã‚’å«ã‚€æ–‡å­—åˆ—ï¼‰
+outfit		ä½å±…ã€è£…å‚™ç­‰ï¼ˆæ”¹è¡Œã‚’å«ã‚€æ–‡å­—åˆ—ï¼‰
 */
 
 /*
-DBÅĞÏ¿ÍÑ¥Ç¡¼¥¿
+DBç™»éŒ²ç”¨ãƒ‡ãƒ¼ã‚¿
 
 player
 name
@@ -600,7 +600,7 @@ comment
  Memo		
  ------------------------------------*/
 function char_copy(
-	$rec	// ¥Ç¡¼¥¿¥Ù¡¼¥¹¥ì¥³¡¼¥É
+	$rec	// ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¬ã‚³ãƒ¼ãƒ‰
 )
 {
 	if( isset( $rec['cid'] ) == TRUE ) $data['cid'] = $rec['cid'];
@@ -652,7 +652,7 @@ function char_copy(
  Memo		
  ------------------------------------*/
 function char_read(
-	$cid	// ¥­¥ã¥é¥¯¥¿ÈÖ¹æ
+	$cid	// ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ç•ªå·
 )
 {
 	global $dbID;
@@ -684,8 +684,8 @@ function char_read(
  Memo		
  ------------------------------------*/
 function char_regist(
-	$pass,	// ¥Ñ¥¹¥ï¡¼¥É
-	$data	// ¥Õ¥©¡¼¥à¥Ç¡¼¥¿
+	$pass,	// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+	$data	// ãƒ•ã‚©ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿
 )
 {
 	global $dbID;
@@ -694,46 +694,46 @@ function char_regist(
 	$now = date( "Y-m-d H:i:s",time() );
 
 	$sql = "insert into " . $ndbDB['tbl'] . " values ( NULL,";
-	$sql .= " '" . sqlite_escape_string( $data['player'] ) . "'";			// ¥×¥ì¥¤¥ä¡¼
-	$sql .= " ,'" . sqlite_escape_string( $pass ) . "'";					// ¥Ñ¥¹¥ï¡¼¥É
-	$sql .= " ,'" . $now . "'";									// ÅĞÏ¿Æü
-	$sql .= " ,'" . $now . "'";									// ºÇ½ª¹¹¿·Æü
-	$sql .= " ,'" . sqlite_escape_string( $data['name'] ) . "'";			// Ì¾Á°¡Ê¥Ï¥ó¥É¥ë´Ş¤à¡Ë
-	$sql .= " ,'" . sqlite_escape_string( $data['category'] ) . "'";		// ¥«¥Æ¥´¥êID
-	$sql .= " ,''";												// ¥«¥Æ¥´¥ê¥¿¥°
-	$sql .= " ,'" . sqlite_escape_string( $data['post'] ) . "'";			// ¿¦¶È/½êÂ°
-	$sql .= " ," . sprintf( "%d",$data['style1'] );				// ¥¹¥¿¥¤¥ë£±
-	$sql .= " ," . sprintf( "%d",$data['style2'] );				// ¥¹¥¿¥¤¥ë£²
-	$sql .= " ," . sprintf( "%d",$data['style3'] );				// ¥¹¥¿¥¤¥ë£³
-	$sql .= " ," . sprintf( "%d",$data['persona'] );			// ¥Ú¥ë¥½¥Ê
-	$sql .= " ," . sprintf( "%d",$data['keyst'] );				// ¥­¡¼
-	$sql .= " ," . sprintf( "%d",$data['reason_ab'] );			// ÍıÀ­Ç½ÎÏÃÍ
-	$sql .= " ," . sprintf( "%d",$data['reason_ct'] );			// ÍıÀ­À©¸æÃÍ
-	$sql .= " ," . sprintf( "%d",$data['passion_ab'] );			// ´¶¾ğÇ½ÎÏÃÍ
-	$sql .= " ," . sprintf( "%d",$data['passion_ct'] );			// ´¶¾ğÀ©¸æÃÍ
-	$sql .= " ," . sprintf( "%d",$data['life_ab'] );			// À¸Ì¿Ç½ÎÏÃÍ
-	$sql .= " ," . sprintf( "%d",$data['life_ct'] );			// À¸Ì¿À©¸æÃÍ
-	$sql .= " ," . sprintf( "%d",$data['mundane_ab'] );			// ³°³¦Ç½ÎÏÃÍ
-	$sql .= " ," . sprintf( "%d",$data['mundane_ct'] );			// ³°³¦À©¸æÃÍ
+	$sql .= " '" . sqlite_escape_string( $data['player'] ) . "'";			// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼
+	$sql .= " ,'" . sqlite_escape_string( $pass ) . "'";					// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+	$sql .= " ,'" . $now . "'";									// ç™»éŒ²æ—¥
+	$sql .= " ,'" . $now . "'";									// æœ€çµ‚æ›´æ–°æ—¥
+	$sql .= " ,'" . sqlite_escape_string( $data['name'] ) . "'";			// åå‰ï¼ˆãƒãƒ³ãƒ‰ãƒ«å«ã‚€ï¼‰
+	$sql .= " ,'" . sqlite_escape_string( $data['category'] ) . "'";		// ã‚«ãƒ†ã‚´ãƒªID
+	$sql .= " ,''";												// ã‚«ãƒ†ã‚´ãƒªã‚¿ã‚°
+	$sql .= " ,'" . sqlite_escape_string( $data['post'] ) . "'";			// è·æ¥­/æ‰€å±
+	$sql .= " ," . sprintf( "%d",$data['style1'] );				// ã‚¹ã‚¿ã‚¤ãƒ«ï¼‘
+	$sql .= " ," . sprintf( "%d",$data['style2'] );				// ã‚¹ã‚¿ã‚¤ãƒ«ï¼’
+	$sql .= " ," . sprintf( "%d",$data['style3'] );				// ã‚¹ã‚¿ã‚¤ãƒ«ï¼“
+	$sql .= " ," . sprintf( "%d",$data['persona'] );			// ãƒšãƒ«ã‚½ãƒŠ
+	$sql .= " ," . sprintf( "%d",$data['keyst'] );				// ã‚­ãƒ¼
+	$sql .= " ," . sprintf( "%d",$data['reason_ab'] );			// ç†æ€§èƒ½åŠ›å€¤
+	$sql .= " ," . sprintf( "%d",$data['reason_ct'] );			// ç†æ€§åˆ¶å¾¡å€¤
+	$sql .= " ," . sprintf( "%d",$data['passion_ab'] );			// æ„Ÿæƒ…èƒ½åŠ›å€¤
+	$sql .= " ," . sprintf( "%d",$data['passion_ct'] );			// æ„Ÿæƒ…åˆ¶å¾¡å€¤
+	$sql .= " ," . sprintf( "%d",$data['life_ab'] );			// ç”Ÿå‘½èƒ½åŠ›å€¤
+	$sql .= " ," . sprintf( "%d",$data['life_ct'] );			// ç”Ÿå‘½åˆ¶å¾¡å€¤
+	$sql .= " ," . sprintf( "%d",$data['mundane_ab'] );			// å¤–ç•Œèƒ½åŠ›å€¤
+	$sql .= " ," . sprintf( "%d",$data['mundane_ct'] );			// å¤–ç•Œåˆ¶å¾¡å€¤
 	$sql .= " ," . sprintf( "%d",$data['combatspeed'] );		// CombatSpeed
 	$sql .= " ," . sprintf( "%d",$data['actionrank'] );			// ActionRank
-	$sql .= " ,'" . sqlite_escape_string( $data['lifepass'] ) . "'";		// ¥é¥¤¥Õ¥Ñ¥¹
-	$sql .= " ,'" . sqlite_escape_string( $data['citizen'] ) . "'";		// »ÔÌ±ID
-	$sql .= " ,'" . sqlite_escape_string( $data['age'] ) . "'";			// Ç¯Îğ
-	$sql .= " ,'" . sqlite_escape_string( $data['jender'] ) . "'";		// À­ÊÌ
-	$sql .= " ,'" . sqlite_escape_string( $data['height'] ) . "'";		// ¿ÈÄ¹
-	$sql .= " ,'" . sqlite_escape_string( $data['weight'] ) . "'";		// ÂÎ½Å
-	$sql .= " ,'" . sqlite_escape_string( $data['eyes'] ) . "'";			// Æ·¤Î¿§
-	$sql .= " ,'" . sqlite_escape_string( $data['hair'] ) . "'";			// È±¤Î¿§
-	$sql .= " ,'" . sqlite_escape_string( $data['skin'] ) . "'";			// È©¤Î¿§
-	$sql .= " ,'" . sqlite_escape_string( $data['birthday'] ) . "'";		// ÃÂÀ¸Æü
+	$sql .= " ,'" . sqlite_escape_string( $data['lifepass'] ) . "'";		// ãƒ©ã‚¤ãƒ•ãƒ‘ã‚¹
+	$sql .= " ,'" . sqlite_escape_string( $data['citizen'] ) . "'";		// å¸‚æ°‘ID
+	$sql .= " ,'" . sqlite_escape_string( $data['age'] ) . "'";			// å¹´é½¢
+	$sql .= " ,'" . sqlite_escape_string( $data['jender'] ) . "'";		// æ€§åˆ¥
+	$sql .= " ,'" . sqlite_escape_string( $data['height'] ) . "'";		// èº«é•·
+	$sql .= " ,'" . sqlite_escape_string( $data['weight'] ) . "'";		// ä½“é‡
+	$sql .= " ,'" . sqlite_escape_string( $data['eyes'] ) . "'";			// ç³ã®è‰²
+	$sql .= " ,'" . sqlite_escape_string( $data['hair'] ) . "'";			// é«ªã®è‰²
+	$sql .= " ,'" . sqlite_escape_string( $data['skin'] ) . "'";			// è‚Œã®è‰²
+	$sql .= " ,'" . sqlite_escape_string( $data['birthday'] ) . "'";		// èª•ç”Ÿæ—¥
 	$sql .= " ,'" . sqlite_escape_string( $data['photo'] ) . "'";			// 
-	$sql .= " ,'" . sqlite_escape_string( $data['exp'] ) . "'";			// ¾ÃÈñ·Ğ¸³ÅÀ
-	$sql .= " ,'" . sqlite_escape_string( $data['pub_skill'] ) . "'";		// °ìÈÌµ»Ç½
-	$sql .= " ,'" . sqlite_escape_string( $data['spc_skill'] ) . "'";		// ÆÃ¼ìµ»Ç½
-	$sql .= " ,'" . sqlite_escape_string( $data['items'] ) . "'";			// ÁõÈ÷
-	$sql .= " ,'" . sqlite_escape_string( $data['profile'] ) . "'";		// Î¬Îò
-	$sql .= " ,'" . sqlite_escape_string( $data['comment'] ) . "'";		// ¥³¥á¥ó¥È
+	$sql .= " ,'" . sqlite_escape_string( $data['exp'] ) . "'";			// æ¶ˆè²»çµŒé¨“ç‚¹
+	$sql .= " ,'" . sqlite_escape_string( $data['pub_skill'] ) . "'";		// ä¸€èˆ¬æŠ€èƒ½
+	$sql .= " ,'" . sqlite_escape_string( $data['spc_skill'] ) . "'";		// ç‰¹æ®ŠæŠ€èƒ½
+	$sql .= " ,'" . sqlite_escape_string( $data['items'] ) . "'";			// è£…å‚™
+	$sql .= " ,'" . sqlite_escape_string( $data['profile'] ) . "'";		// ç•¥æ­´
+	$sql .= " ,'" . sqlite_escape_string( $data['comment'] ) . "'";		// ã‚³ãƒ¡ãƒ³ãƒˆ
 	$sql .= " );";
 
 //	dbgLog( $sql );
@@ -753,9 +753,9 @@ function char_regist(
  Memo		
  ------------------------------------*/
 function char_update(
-	$cid,	// ¥­¥ã¥éÈÖ¹æ
-	$pass,	// ¥Ñ¥¹¥ï¡¼¥É
-	$data	// ¥Õ¥©¡¼¥à¥Ç¡¼¥¿
+	$cid,	// ã‚­ãƒ£ãƒ©ç•ªå·
+	$pass,	// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+	$data	// ãƒ•ã‚©ãƒ¼ãƒ ãƒ‡ãƒ¼ã‚¿
 )
 {
 	global $dbID;
@@ -820,9 +820,9 @@ function char_update(
  Memo		
  ------------------------------------*/
 function char_chpass(
-	$cid,	// ¥­¥ã¥éÈÖ¹æ
-	$old,	// µì¥Ñ¥¹¥ï¡¼¥É
-	$pass	// ¿·¥Ñ¥¹¥ï¡¼¥É
+	$cid,	// ã‚­ãƒ£ãƒ©ç•ªå·
+	$old,	// æ—§ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
+	$pass	// æ–°ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 )
 {
 	global $dbID;
@@ -844,8 +844,8 @@ function char_chpass(
  Memo		
  ------------------------------------*/
 function char_passchk(
-	$cid,	// ¥­¥ã¥éÈÖ¹æ
-	$pass	// ¥Ñ¥¹¥ï¡¼¥É
+	$cid,	// ã‚­ãƒ£ãƒ©ç•ªå·
+	$pass	// ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 )
 {
 	global $dbID;
@@ -873,7 +873,7 @@ function char_passchk(
  Memo		
  ------------------------------------*/
 function char_delete(
-	$cid	// ¥­¥ã¥éÈÖ¹æ
+	$cid	// ã‚­ãƒ£ãƒ©ç•ªå·
 )
 {
 	global $dbID;

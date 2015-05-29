@@ -1,5 +1,5 @@
 <center>
-б╘╞ё╣╢╔╘═юб╒д├!! ╟з╛┌═╤евележеєе╚┤╔═¤е╖е╣е╞ер<br>
+уАКщЫгцФ╗ф╕НшР╜уАЛуБг!! шкНши╝чФиуВвуВлуВжуГ│уГИчобчРЖуВ╖уВ╣уГЖуГа<br>
 <br>
 <hr width="100%">
 <br>
@@ -20,6 +20,6 @@ if( $CONT_MSG != "" ) {
 ?>
 <br>
 <form method=POST action="<?php echo $scriptPath; ?>">
-	<input type="submit" value="╠сды">
+	<input type="submit" value="цИ╗уВЛ">
 </form>
 </center>

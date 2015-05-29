@@ -1,28 +1,28 @@
 <?php
 if( db_open() == TRUE ) {
 
-	// �ڡ����ֹ�
+	// ページ番号
 	$REQ_PAGE = getf_num( "PAGE", 1 );
 
-	// ����饯���ֹ�
+	// キャラクタ番号
 	$REQ_CID = getf_num( "NO", -1 );
 
-	// ������������������
+	// 検索キー・スタイル
 	$REQ_FIND['style'] = getf_text( "S_STYLE", "" );
 
-	// �����������ץ쥤�䡼̾
+	// 検索キー・プレイヤー名
 	$REQ_FIND['player'] = getf_text( "S_PLAYER", "" );
 	if( strlen( $REQ_FIND['player'] ) > 80 ) {
 		$REQ_FIND['player'] = substr( $REQ_FIND['player'],0,80 );
 	}
 
-	// ������������ͳ�������
+	// 検索キー・自由キーワード
 	$REQ_FIND['keyword'] = getf_text( "S_KEYWORD", "" );
 	if( strlen( $REQ_FIND['keyword'] ) > 100 ) {
 		$REQ_FIND['keyword'] = substr( $REQ_FIND['keyword'],0,100 );
 	}
 
-	// ��������������饯��ʬ��
+	// 検索キー・キャラクタ分類
 	$REQ_FIND['category'] = getf_text( "S_CATEGORY", $defaultSearchCategory );
 	if( $REQ_FIND['category'] != "all" ) {
 		$f = 0;
@@ -35,19 +35,19 @@ if( db_open() == TRUE ) {
 	$CMD = getf_text( "CMD", "list" );
 
 	switch( $CMD ) {
-	case 'list':	// ��������
+	case 'list':	// 一覧画面
 		$CONT_FIND = $REQ_FIND;
 		$CONT_PAGE = $REQ_PAGE;
 		$content = "LIST";
 		break;
 
-	case 'abstract':// ��������
+	case 'abstract':// 概覧画面
 		$CONT_FIND = $REQ_FIND;
 		$CONT_PAGE = $REQ_PAGE;
 		$content = "ABSTRACT";
 		break;
 
-	case 'view':	// ��������
+	case 'view':	// 閲覧画面
 		$CONT_FIND = $REQ_FIND;
 
 		if( $REQ_CID >= 0 ) {
@@ -56,14 +56,14 @@ if( db_open() == TRUE ) {
 			$content = "PROFILE";
 		}
 		else {
-			$CONT_ERR = "�оݥ���饯�������ꤵ��Ƥ��ޤ���";
+			$CONT_ERR = "対象キャラクタが指定されていません。";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'pdfview':	// �����Ѳ���
+	case 'pdfview':	// 印刷用画面
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_FIND = $REQ_FIND;
@@ -81,18 +81,18 @@ if( db_open() == TRUE ) {
 			$content = "PDFVIEW";
 		}
 		else {
-			$CONT_ERR = "�оݥ���饯�������ꤵ��Ƥ��ޤ���";
+			$CONT_ERR = "対象キャラクタが指定されていません。";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'xmlprof':	// XML�������ݡ���
+	case 'xmlprof':	// XMLエクスポート
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_CID = $REQ_CID;
-			$CONT_ERR = "̤������ǽ�Ǥ���";
+			$CONT_ERR = "未実装機能です。";
 			$content = "PROFILE";
 /*
 			$CONT_FIND = $REQ_FIND;
@@ -101,18 +101,18 @@ if( db_open() == TRUE ) {
 */
 		}
 		else {
-			$CONT_ERR = "�оݥ���饯�������ꤵ��Ƥ��ޤ���";
+			$CONT_ERR = "対象キャラクタが指定されていません。";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'f_reg':	// ������Ͽ����
+	case 'f_reg':	// 新規登録画面
 		$content = "REGIST";
 		break;
 
-	case 'f_ed':	// �Խ�����
+	case 'f_ed':	// 編集画面
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_CID = $REQ_CID;
@@ -121,19 +121,19 @@ if( db_open() == TRUE ) {
 				$content = "EDIT";
 			}
 			else {
-				$CONT_ERR = "�Խ����̤ذܹԽ���ޤ���\n( �ѥ���ɤ����פ��ޤ��� )";
+				$CONT_ERR = "編集画面へ移行出来ません。\n( パスワードが一致しません )";
 				$content = "PROFILE";
 			}
 		}
 		else {
-			$CONT_ERR = "�оݥ���饯�������ꤵ��Ƥ��ޤ���";
+			$CONT_ERR = "対象キャラクタが指定されていません。";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'f_del':	// �����ǧ����
+	case 'f_del':	// 削除確認画面
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_CID = $REQ_CID;
@@ -142,33 +142,33 @@ if( db_open() == TRUE ) {
 				$content = "DELETE";
 			}
 			else {
-				$CONT_ERR = "���ʤ��Ϥ��Υ���饯���������뤳�ȤϽ���ޤ���\n( �ѥ���ɤ����פ��ޤ��� )";
+				$CONT_ERR = "あなたはこのキャラクタを削除することは出来ません。\n( パスワードが一致しません )";
 				$content = "PROFILE";
 			}
 		}
 		else {
-			$CONT_ERR = "�оݥ���饯�������ꤵ��Ƥ��ޤ���";
+			$CONT_ERR = "対象キャラクタが指定されていません。";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'f_dup':	// ʣ�����ƿ�����������
+	case 'f_dup':	// 複製して新規作成画面
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_CID = $REQ_CID;
 			$content = "DUPLICATE";
 		}
 		else {
-			$CONT_ERR = "�оݥ���饯�������ꤵ��Ƥ��ޤ���";
+			$CONT_ERR = "対象キャラクタが指定されていません。";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'regist':	// �ǡ�����Ͽ����������
+	case 'regist':	// データ登録→一覧画面
 		if( isset( $_REQUEST['pass'] ) == TRUE ) $CONT_PASS = stripslashes( substr( $_REQUEST['pass'],0,30 ) ); else $CONT_PASS = "";
 		$regist = get_registform();
 		if( $CONT_PASS != "" ) {
@@ -181,17 +181,17 @@ if( db_open() == TRUE ) {
 				$content = "LIST";
 			}
 			else {
-				$CONT_ERR = "����饯������Ͽ�˼��Ԥ��ޤ�����\n( HANDLE��ɬ�����Ϥ��Ƥ������� )";
+				$CONT_ERR = "キャラクタの登録に失敗しました。\n( HANDLEは必ず入力してください )";
 				$content = "REGIST";
 			}
 		}
 		else {
-			$CONT_ERR = "����饯������Ͽ�˼��Ԥ��ޤ�����\n( �ѥ���ɤ�ɬ�����Ϥ��Ƥ������� )";
+			$CONT_ERR = "キャラクタの登録に失敗しました。\n( パスワードは必ず入力してください )";
 			$content = "REGIST";
 		}
 		break;
 
-	case 'edit':	// �ǡ�����������������
+	case 'edit':	// データ更新→一覧画面
 		if( $REQ_CID >= 0 ) {
 		
 			$CONT_CID = $REQ_CID;
@@ -204,7 +204,7 @@ if( db_open() == TRUE ) {
 					$content = "PROFILE";
 				}
 				else {
-					$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+					$CONT_ERR = "該当するキャラクタは存在しません。";
 					$CONT_FIND = $REQ_FIND;
 					$CONT_PAGE = 1;
 					$content = "LIST";
@@ -215,11 +215,11 @@ if( db_open() == TRUE ) {
 			}
 			else {
 				if( ($CONT_DATA = char_read( $CONT_CID )) != FALSE ) {
-					$CONT_ERR = "����饯���ι����˼��Ԥ��ޤ�����\n( �ѥ���ɤ����פ��ޤ��� )";
+					$CONT_ERR = "キャラクタの更新に失敗しました。\n( パスワードが一致しません )";
 					$content = "PROFILE";
 				}
 				else {
-					$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+					$CONT_ERR = "該当するキャラクタは存在しません。";
 					$CONT_FIND = $REQ_FIND;
 					$CONT_PAGE = 1;
 					$content = "LIST";
@@ -227,14 +227,14 @@ if( db_open() == TRUE ) {
 			}
 		}
 		else {
-			$CONT_ERR = "����饯���ι����˼��Ԥ��ޤ�����\n( �оݥ���饯�������ꤵ��Ƥ��ޤ��� )";
+			$CONT_ERR = "キャラクタの更新に失敗しました。\n( 対象キャラクタが指定されていません )";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'delete':	// �������������
+	case 'delete':	// 削除→一覧画面
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_CID = $REQ_CID;
@@ -244,25 +244,25 @@ if( db_open() == TRUE ) {
 
 				char_delete( $CONT_CID );
 
-				$CONT_ERR = "����饯���������ޤ�����";
+				$CONT_ERR = "キャラクタを削除しました。";
 				$CONT_FIND = $REQ_FIND;
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
 			else {
-				$CONT_ERR = "����饯���κ���˼��Ԥ��ޤ�����\n( �ѥ���ɤ����פ��ޤ��� )";
+				$CONT_ERR = "キャラクタの削除に失敗しました。\n( パスワードが一致しません )";
 				$content = "PROFILE";
 			}
 		}
 		else {
-			$CONT_ERR = "����饯���κ���˼��Ԥ��ޤ�����\n( �оݥ���饯�������ꤵ��Ƥ��ޤ��� )";
+			$CONT_ERR = "キャラクタの削除に失敗しました。\n( 対象キャラクタが指定されていません )";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
 		}
 		break;
 
-	case 'chpass':	// �ѥ�����ѹ�����������
+	case 'chpass':	// パスワード変更→閲覧画面
 		if( $REQ_CID >= 0 ) {
 
 			$CONT_CID = $REQ_CID;
@@ -273,16 +273,16 @@ if( db_open() == TRUE ) {
 
 				char_chpass( $CONT_CID,$CONT_PASS,$CONT_NPASS );
 
-				$CONT_ERR = "�ѥ���ɤ��ѹ����ޤ�����";
+				$CONT_ERR = "パスワードを変更しました。";
 				$content = "PROFILE";
 			}
 			else {
 				if( ($CONT_DATA = char_read( $CONT_CID )) != FALSE ) {
-					$CONT_ERR = "�ѥ���ɤ��ѹ��˼��Ԥ��ޤ�����\n( ��ѥ���ɤ����פ��ޤ��� )";
+					$CONT_ERR = "パスワードの変更に失敗しました。\n( 旧パスワードが一致しません )";
 					$content = "PROFILE";
 				}
 				else {
-					$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+					$CONT_ERR = "該当するキャラクタは存在しません。";
 					$CONT_FIND = $REQ_FIND;
 					$CONT_PAGE = 1;
 					$content = "LIST";
@@ -290,7 +290,7 @@ if( db_open() == TRUE ) {
 			}
 		}
 		else {
-			$CONT_ERR = "�ѥ���ɤ��ѹ��˼��Ԥ��ޤ�����\n( �оݥ���饯�������ꤵ��Ƥ��ޤ��� )";
+			$CONT_ERR = "パスワードの変更に失敗しました。\n( 対象キャラクタが指定されていません )";
 			$CONT_FIND = $REQ_FIND;
 			$CONT_PAGE = 1;
 			$content = "LIST";
@@ -298,7 +298,7 @@ if( db_open() == TRUE ) {
 		break;
 
 
-	default:	// ̵���ʥ��ޥ��
+	default:	// 無効なコマンド
 		if( $REQ_CID >= 0 ) {
 			$CONT_CID  = $REQ_CID;
 			$CONT_FIND = $REQ_FIND;
@@ -319,11 +319,11 @@ if( db_open() == TRUE ) {
 
 		switch( $content ) {
 		case 'LIST':
-			// ����饯������
+			// キャラクタ一覧
 
 			$wh = form2find( $CONT_FIND );
 
-			// �쥳���ɿ��μ���
+			// レコード数の取得
 			$sql = "select * from " . $ndbDB['tbl'] . " " . $wh;
 			$sql .= ";";
 
@@ -357,11 +357,11 @@ if( db_open() == TRUE ) {
 			break;
 
 		case 'ABSTRACT':
-			// ����饯������
+			// キャラクタ一覧
 
 			$wh = form2find( $CONT_FIND );
 
-			// �쥳���ɿ��μ���
+			// レコード数の取得
 			$sql = "select * from " . $ndbDB['tbl'] . " " . $wh;
 			$sql .= ";";
 
@@ -395,59 +395,59 @@ if( db_open() == TRUE ) {
 			break;
 
 		case 'PROFILE':
-			// ����饯���ǡ�������
+			// キャラクタデータ閲覧
 			if( ($CONT_DATA = char_read( $CONT_CID )) != FALSE ) $content = "PROFILE";
 			else {
-				$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+				$CONT_ERR = "該当するキャラクタは存在しません。";
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
 			break;
 
 		case 'REGIST':
-			// ����饯���ǡ�����Ͽ
+			// キャラクタデータ登録
 			break;
 
 		case 'EDIT':
-			// ����饯���ǡ����Խ�
+			// キャラクタデータ編集
 			if( ($CONT_DATA = char_read( $CONT_CID )) == FALSE ) {
-				$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+				$CONT_ERR = "該当するキャラクタは存在しません。";
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
 			break;
 
 		case 'DUPLICATE':
-			// ����饯���ǡ���ʣ����Ͽ
+			// キャラクタデータ複製登録
 			if( ($CONT_DATA = char_read( $CONT_CID )) == FALSE ) {
-				$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+				$CONT_ERR = "該当するキャラクタは存在しません。";
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
 			break;
 
 		case 'DELETE':
-			// ����饯�������ǧ
+			// キャラクタ削除確認
 			if( ($CONT_DATA = char_read( $CONT_CID )) == FALSE ) {
-				$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+				$CONT_ERR = "該当するキャラクタは存在しません。";
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
 			break;
 
 		case 'PDFVIEW':
-			// ����饯��������
+			// キャラクタ印刷用
 			if( ($CONT_DATA = char_read( $CONT_CID )) == FALSE ) {
-				$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+				$CONT_ERR = "該当するキャラクタは存在しません。";
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
 			break;
 
 		case 'XMLPROF':
-			// XML�������ݡ���
+			// XMLエクスポート
 			if( ($CONT_DATA = char_read( $CONT_CID )) == FALSE ) {
-				$CONT_ERR = "�������륭��饯����¸�ߤ��ޤ���";
+				$CONT_ERR = "該当するキャラクタは存在しません。";
 				$CONT_PAGE = 1;
 				$content = "LIST";
 			}
@@ -463,8 +463,8 @@ if( db_open() == TRUE ) {
 	db_close();
 }
 else {
-	// DB��³���褺
-	$CONT_ERR = "�ǡ����١����ؤ���³�˼��Ԥ��ޤ�����";
+	// DB接続出来ず
+	$CONT_ERR = "データベースへの接続に失敗しました。";
 	$CONT_MSG = "";
 	$content = "ERROR";
 }

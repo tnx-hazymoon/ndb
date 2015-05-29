@@ -42,15 +42,15 @@ if( isset( $CONT_MSG ) == TRUE ) {
 					<TH width="60%" colSpan=4><SPAN class=novastyle><?php echo htmlspecialchars( style2format( $rec['style1'],$rec['style2'],$rec['style3'],$rec['persona'],$rec['keyst'] ) ); ?></SPAN></TH>
 				</TR>
 				<TR>
-					<TH><SPAN class=post>° ∑–∏≥≈¿°ß<?php echo htmlspecialchars( $rec['exp'] ); ?>°À</span></TH>
+					<TH><SPAN class=post>ÔºàÁµåÈ®ìÁÇπÔºö<?php echo htmlspecialchars( $rec['exp'] ); ?>Ôºâ</span></TH>
 					<TH width="15%"><SPAN class=ability><?php echo sprintf( "%d/%d",$rec['reason_ab'],$rec['reason_ct'] ); ?></SPAN></TH>
 					<TH width="15%"><SPAN class=ability><?php echo sprintf( "%d/%d",$rec['passion_ab'],$rec['passion_ct'] ); ?></SPAN></TH>
 					<TH width="15%"><SPAN class=ability><?php echo sprintf( "%d/%d",$rec['life_ab'],$rec['life_ct'] ); ?></SPAN></TH>
 					<TH width="15%"><SPAN class=ability><?php echo sprintf( "%d/%d",$rec['mundane_ab'],$rec['mundane_ct'] ); ?></SPAN></TH>
 				</TR>
 				<TR>
-					<TH colspan=2>° CombatSpeed°ß<?php echo sprintf( "%d", $rec['combatspeed'] ); ?>°À</TH>
-					<TH colspan=3>° ActionRank°ß<?php echo sprintf( "%d", $rec['actionrank'] ); ?>°À</TH>
+					<TH colspan=2>ÔºàCombatSpeedÔºö<?php echo sprintf( "%d", $rec['combatspeed'] ); ?>Ôºâ</TH>
+					<TH colspan=3>ÔºàActionRankÔºö<?php echo sprintf( "%d", $rec['actionrank'] ); ?>Ôºâ</TH>
 				</TR>
 				</TBODY>
 			</TABLE>
@@ -66,14 +66,14 @@ if( isset( $CONT_MSG ) == TRUE ) {
 			for( $p = 0;($p < $cateList['num'])&&($cateList[$p]['id'] != $rec['category']);$p++ );
 			if( $p < $cateList['num'] ) echo htmlspecialchars( $cateList[$p]['name'] ); else echo "unknown";
 			?><br>
-			ID: <?php echo htmlspecialchars( $rec['citizen'] ); ?>°°
-			Aj: <?php echo htmlspecialchars( $rec['age'] ); ?>°°
-			Jender: <?php echo htmlspecialchars( $rec['jender'] ); ?>°°
-			Heit: <?php echo htmlspecialchars( $rec['height'] ); ?>cm°°
+			ID: <?php echo htmlspecialchars( $rec['citizen'] ); ?>„ÄÄ
+			Aj: <?php echo htmlspecialchars( $rec['age'] ); ?>„ÄÄ
+			Jender: <?php echo htmlspecialchars( $rec['jender'] ); ?>„ÄÄ
+			Heit: <?php echo htmlspecialchars( $rec['height'] ); ?>cm„ÄÄ
 			Weit: <?php echo htmlspecialchars( $rec['weight'] ); ?>kg<BR>
-			Eyez: <?php echo htmlspecialchars( $rec['eyes'] ); ?>°°
-			Hair: <?php echo htmlspecialchars( $rec['hair'] ); ?>°°
-			Skin: <?php echo htmlspecialchars( $rec['skin'] ); ?>°°
+			Eyez: <?php echo htmlspecialchars( $rec['eyes'] ); ?>„ÄÄ
+			Hair: <?php echo htmlspecialchars( $rec['hair'] ); ?>„ÄÄ
+			Skin: <?php echo htmlspecialchars( $rec['skin'] ); ?>„ÄÄ
 			BirthDay: <?php echo htmlspecialchars( $rec['birthday'] ); ?>
 			<P><?php
 			$lines = split( "\n", $rec['lifepass'] );
@@ -121,8 +121,8 @@ if( isset( $CONT_MSG ) == TRUE ) {
 		<INPUT type=hidden name=S_STYLE    value="<?php echo htmlspecialchars( $CONT_FIND['style'] ); ?>">
 		<INPUT type=hidden name=S_CATEGORY value="<?php echo htmlspecialchars( $CONT_FIND['category'] ); ?>">
 		<TH align=middle colSpan=2>
-			•—•π•Ô°º•…:<INPUT type=password size=15 name=pass>
-			<INPUT type=submit value= ‘Ω∏°øƒ˚¿µ>
+			„Éë„Çπ„ÉØ„Éº„Éâ:<INPUT type=password size=15 name=pass>
+			<INPUT type=submit value=Á∑®ÈõÜÔºèË®ÇÊ≠£>
 		</TH>
 	</TR>
 	</FORM>
@@ -138,7 +138,7 @@ if( isset( $CONT_MSG ) == TRUE ) {
 			<INPUT type=hidden name=S_KEYWORD  value="<?php echo htmlspecialchars( $CONT_FIND['keyword'] ); ?>">
 			<INPUT type=hidden name=S_STYLE    value="<?php echo htmlspecialchars( $CONT_FIND['style'] ); ?>">
 			<INPUT type=hidden name=S_CATEGORY value="<?php echo htmlspecialchars( $CONT_FIND['category'] ); ?>">
-			<INPUT type=submit value=§≥§Œ•«°º•ø§«ø∑µ¨∫Ó¿Æ>
+			<INPUT type=submit value=„Åì„ÅÆ„Éá„Éº„Çø„ÅßÊñ∞Ë¶è‰ΩúÊàê>
 			</td>
 			</form>
 			<FORM action=<?php echo $scriptPath; ?> method=post>
@@ -149,7 +149,7 @@ if( isset( $CONT_MSG ) == TRUE ) {
 			<INPUT type=hidden name=S_KEYWORD  value="<?php echo htmlspecialchars( $CONT_FIND['keyword'] ); ?>">
 			<INPUT type=hidden name=S_STYLE    value="<?php echo htmlspecialchars( $CONT_FIND['style'] ); ?>">
 			<INPUT type=hidden name=S_CATEGORY value="<?php echo htmlspecialchars( $CONT_FIND['category'] ); ?>">
-			<INPUT type=submit value=XML•«°º•ø§Ú•®•Ø•π•›°º•»>
+			<INPUT type=submit value=XML„Éá„Éº„Çø„Çí„Ç®„ÇØ„Çπ„Éù„Éº„Éà>
 			</td>
 			</form>
 			<FORM action=<?php echo $scriptPath; ?> method=post>
@@ -160,7 +160,7 @@ if( isset( $CONT_MSG ) == TRUE ) {
 			<INPUT type=hidden name=S_KEYWORD  value="<?php echo htmlspecialchars( $CONT_FIND['keyword'] ); ?>">
 			<INPUT type=hidden name=S_STYLE    value="<?php echo htmlspecialchars( $CONT_FIND['style'] ); ?>">
 			<INPUT type=hidden name=S_CATEGORY value="<?php echo htmlspecialchars( $CONT_FIND['category'] ); ?>">
-			<INPUT type=submit value=∞ı∫˛Õ—≤ËÃÃ>
+			<INPUT type=submit value=Âç∞Âà∑Áî®ÁîªÈù¢>
 			</td>
 			</FORM>
 			</tr>
@@ -176,8 +176,8 @@ if( isset( $CONT_MSG ) == TRUE ) {
 		<INPUT type=hidden name=S_STYLE    value="<?php echo htmlspecialchars( $CONT_FIND['style'] ); ?>">
 		<INPUT type=hidden name=S_CATEGORY value="<?php echo htmlspecialchars( $CONT_FIND['category'] ); ?>">
 		<TD align=center>
-			•—•π•Ô°º•…:<INPUT type=password size=15 name=pass>
-			<INPUT type=submit value=∫ÔΩ¸> </TD>
+			„Éë„Çπ„ÉØ„Éº„Éâ:<INPUT type=password size=15 name=pass>
+			<INPUT type=submit value=ÂâäÈô§> </TD>
 		</td>
 		</FORM>
 		<FORM action=<?php echo $scriptPath; ?> method=post>
@@ -188,9 +188,9 @@ if( isset( $CONT_MSG ) == TRUE ) {
 		<INPUT type=hidden name=S_STYLE    value="<?php echo htmlspecialchars( $CONT_FIND['style'] ); ?>">
 		<INPUT type=hidden name=S_CATEGORY value="<?php echo htmlspecialchars( $CONT_FIND['category'] ); ?>">
 		<TD align=center>
-			° ∏Ω∫ﬂ§Œ°À•—•π•Ô°º•…:<INPUT type=password size=15 name=oldpass>
-			ø∑•—•π•Ô°º•…:<INPUT type=password size=15 name=newpass>
-			<INPUT type=submit value=•—•π•Ô°º•… —ππ> </TD>
+			ÔºàÁèæÂú®„ÅÆÔºâ„Éë„Çπ„ÉØ„Éº„Éâ:<INPUT type=password size=15 name=oldpass>
+			Êñ∞„Éë„Çπ„ÉØ„Éº„Éâ:<INPUT type=password size=15 name=newpass>
+			<INPUT type=submit value=„Éë„Çπ„ÉØ„Éº„ÉâÂ§âÊõ¥> </TD>
 		</td>
 		</FORM>
 	</TR>

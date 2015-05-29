@@ -1,6 +1,6 @@
 <?php
 
-// Ê¸»ú¥³¡¼¥É¤ÎÊÑ´¹
+// æ–‡å­—ã‚³ãƒ¼ãƒ‰ã®å¤‰æ›
 function e2u( $txt )
 {
 	return mb_convert_encoding( $txt, "UTF-8" );

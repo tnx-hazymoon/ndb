@@ -1,16 +1,16 @@
 <?php
 /*
-	£Î¡ý£Ö£Á¥­¥ã¥é¥Ç¡¼¥¿¥Ù¡¼¥¹
-	N¡ýVA Character-Database system
+	ï¼®â—Žï¼¶ï¼¡ã‚­ãƒ£ãƒ©ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹
+	Nâ—ŽVA Character-Database system
 */
 
 include( "./inc/define.php" );
 include( "./inc/libs.php" );
 include( "./inc/funcs.php" );
 
-// ¥ê¥¯¥¨¥¹¥È½èÍý
+// ãƒªã‚¯ã‚¨ã‚¹ãƒˆå‡¦ç†
 include( "./inc/exec.php" );
 
-// ¥³¥ó¥Æ¥ó¥Ä½ÐÎÏ
+// ã‚³ãƒ³ãƒ†ãƒ³ãƒ„å‡ºåŠ›
 include( "./inc/output.php" );
 ?>

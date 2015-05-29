@@ -7,26 +7,26 @@
 			if( $CONT_FIND['keyword'] != "" ) echo "&S_KEYWORD=" . urlencode( $CONT_FIND['keyword'] );
 			if( $CONT_FIND['style'] != "" ) echo "&S_STYLE=" . urlencode( $CONT_FIND['style'] );
 			if( $CONT_FIND['category'] != "" ) echo "&S_CATEGORY=" . urlencode( $CONT_FIND['category'] ); else echo "&S_CATEGORY=" . urlencode( $defaultSearchCategory );
-			?>">┐╖╡м<br>┼╨╧┐</A>
+			?>">цЦ░шжП<br>чЩ╗щМ▓</A>
 		</th>
 		<Th width="45">
 			<A href="<?php echo $scriptPath; ?>?CMD=list<?php
 			if( $CONT_FIND['category'] != "" ) echo "&S_CATEGORY=" . urlencode( $CONT_FIND['category'] ); else echo "&S_CATEGORY=" . urlencode( $defaultSearchCategory );
-			?>">░ь═ў<br>╔╜╝и</A>
+			?>">ф╕Ашжз<br>шбичд║</A>
 		</th>
 		<Th width="45">
 			<A href="<?php echo $scriptPath; ?>?CMD=abstract<?php
 			if( $CONT_FIND['category'] != "" ) echo "&S_CATEGORY=" . urlencode( $CONT_FIND['category'] ); else echo "&S_CATEGORY=" . urlencode( $defaultSearchCategory );
-			?>">│╡═ў<br>╔╜╝и</A>
+			?>">цжВшжз<br>шбичд║</A>
 		</th>
 		<FORM action="<?php echo $scriptPath; ?>" method=post>
 		<td width="<?php printf( "%d",$displayTableWidth - (45+45+45+60) ); ?>" align="left">
 			<table border=0 cellspacing=0 cellpadding=0>
 				<tr>
-					<td><b>ббенб╝еяб╝е╔</b><INPUT type="text" name=S_KEYWORD size=20<?php if( $CONT_FIND['keyword'] != "" ) echo " value=\"" . htmlspecialchars( $CONT_FIND['keyword'] ) . "\""; ?>></td>
-					<td><b>ббг╨г╠</b><INPUT type="text" name=S_PLAYER size=16<?php if( $CONT_FIND['player'] != "" ) echo " value=\"" . htmlspecialchars( $CONT_FIND['player'] ) . "\""; ?>></td>
+					<td><b>уААуВнуГ╝уГпуГ╝уГЙ</b><INPUT type="text" name=S_KEYWORD size=20<?php if( $CONT_FIND['keyword'] != "" ) echo " value=\"" . htmlspecialchars( $CONT_FIND['keyword'] ) . "\""; ?>></td>
+					<td><b>уААя╝░я╝м</b><INPUT type="text" name=S_PLAYER size=16<?php if( $CONT_FIND['player'] != "" ) echo " value=\"" . htmlspecialchars( $CONT_FIND['player'] ) . "\""; ?>></td>
 					<td>
-						<b>ббе╣е┐едеы</b>
+						<b>уААуВ╣уВ┐уВдуГл</b>
 						<SELECT name=S_STYLE>
 							<OPTION<?php if( $CONT_FIND['style'] == "" ) echo " selected"; ?>></OPTION>
 							<?php
@@ -43,7 +43,7 @@
 				</tr>
 				<tr>
 					<td colspan=6>
-						<b>ббеле╞е┤еъб╝</b>
+						<b>уААуВлуГЖуВ┤уГкуГ╝</b>
 						<SELECT size=1 name=S_CATEGORY>
 						<?php
 						for( $p = 0,$f = 0;$p < $cateList['num'];$p++ ) {
@@ -53,15 +53,15 @@
 						}
 						?>
 						</SELECT>
-						бб<input type="radio" name="CMD" value="list" checked>░ь═ў
-						бб<input type="radio" name="CMD" value="abstract">│╡═ў
-						бббб<input type="submit" value="енеуещепе┐╕б║ў">
+						уАА<input type="radio" name="CMD" value="list" checked>ф╕Ашжз
+						уАА<input type="radio" name="CMD" value="abstract">цжВшжз
+						уААуАА<input type="submit" value="уВнуГгуГйуВпуВ┐цдЬч┤в">
 					</td>
 				</tr>
 			</table>
 		</td>
 		</form>
-		<Th width="60"><A href="<?php echo $HomePage; ?>">┐╞е╡еде╚<br>д╪╠сды</a></th>
+		<Th width="60"><A href="<?php echo $HomePage; ?>">шжкуВ╡уВдуГИ<br>уБ╕цИ╗уВЛ</a></th>
 	</tr>
 	</TBODY>
 </table>

@@ -33,7 +33,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>[Á°¥Ú¡¼¥¸]</b>¡¡<b>¢ã</b>¡¡
+	<b>[å‰ãƒšãƒ¼ã‚¸]</b>ã€€<b>â‰ª</b>ã€€
 	<?php if( $CONT_PAGE > 1 ) echo "</a>"; ?>
 	</td>
 	<td align="center">
@@ -51,7 +51,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>¢ä</b>¡¡<b>[¼¡¥Ú¡¼¥¸]</b>
+	<b>â‰«</b>ã€€<b>[æ¬¡ãƒšãƒ¼ã‚¸]</b>
 	<?php if( $CONT_PAGE < $page_max ) echo "</a>"; ?>
 	</td>
 </tr>
@@ -82,14 +82,14 @@ if( $CONT_DATA != NULL ) {
 		</SPAN><br>
 		<hr width="100%">
 		<div align="left" style="FONT-SIZE: 9pt; LINE-HEIGHT: 10pt;">
-			ID: <?php echo htmlspecialchars( $rec['citizen'] ); ?>¡¡
-			Aj: <?php echo htmlspecialchars( $rec['age'] ); ?>¡¡
-			Jender: <?php echo htmlspecialchars( $rec['jender'] ); ?>¡¡
-			Heit: <?php echo htmlspecialchars( $rec['height'] ); ?>cm¡¡
+			ID: <?php echo htmlspecialchars( $rec['citizen'] ); ?>ã€€
+			Aj: <?php echo htmlspecialchars( $rec['age'] ); ?>ã€€
+			Jender: <?php echo htmlspecialchars( $rec['jender'] ); ?>ã€€
+			Heit: <?php echo htmlspecialchars( $rec['height'] ); ?>cmã€€
 			Weit: <?php echo htmlspecialchars( $rec['weight'] ); ?>kg<BR>
-			Eyez: <?php echo htmlspecialchars( $rec['eyes'] ); ?>¡¡
-			Hair: <?php echo htmlspecialchars( $rec['hair'] ); ?>¡¡
-			Skin: <?php echo htmlspecialchars( $rec['skin'] ); ?>¡¡
+			Eyez: <?php echo htmlspecialchars( $rec['eyes'] ); ?>ã€€
+			Hair: <?php echo htmlspecialchars( $rec['hair'] ); ?>ã€€
+			Skin: <?php echo htmlspecialchars( $rec['skin'] ); ?>ã€€
 			BirthDay: <?php echo htmlspecialchars( $rec['birthday'] ); ?>
 		</div>
 	</TD>
@@ -100,19 +100,19 @@ if( $CONT_DATA != NULL ) {
 			if( $CONT_FIND['style'] != "" ) echo "&S_STYLE=" . urlencode( $CONT_FIND['style'] );
 			if( $CONT_FIND['category'] != "" ) echo "&S_CATEGORY=" . urlencode( $CONT_FIND['category'] );
 			?>"><?php echo htmlspecialchars( $rec['player'] ); ?></A>
-		</SPAN>¡¡¡ÊExp¡§<?php echo htmlspecialchars( $rec['exp'] ); ?>
-		¡¡Update¡§<?php echo substr( $rec['updtime'],0,10 ); ?>)
+		</SPAN>ã€€ï¼ˆExpï¼š<?php echo htmlspecialchars( $rec['exp'] ); ?>
+		ã€€Updateï¼š<?php echo substr( $rec['updtime'],0,10 ); ?>)
 		<BR>
 		<SPAN class=novastyle>
 		<?php echo htmlspecialchars( style2format( (int)$rec['style1'],(int)$rec['style2'],(int)$rec['style3'],(int)$rec['persona'],(int)$rec['keyst'] ) ); ?>
 		</span>
 		<br>
 		<SPAN class=ability>
-		ÍýÀ­¡§<?php echo sprintf( "%d/%d",$rec['reason_ab'],$rec['reason_ct'] ); ?>¡¡
-		´¶¾ð¡§<?php echo sprintf( "%d/%d",$rec['passion_ab'],$rec['passion_ct'] ); ?>¡¡
-		À¸Ì¿¡§<?php echo sprintf( "%d/%d",$rec['life_ab'],$rec['life_ct'] ); ?>¡¡
-		³°³¦¡§<?php echo sprintf( "%d/%d",$rec['mundane_ab'],$rec['mundane_ct'] ); ?></SPAN><br>
-		¡ÊCombatSpeed¡§<?php echo sprintf( "%d", $rec['combatspeed'] ); ?>¡¤ActionRank¡§<?php echo sprintf( "%d", $rec['actionrank'] ); ?>¡Ë<br>
+		ç†æ€§ï¼š<?php echo sprintf( "%d/%d",$rec['reason_ab'],$rec['reason_ct'] ); ?>ã€€
+		æ„Ÿæƒ…ï¼š<?php echo sprintf( "%d/%d",$rec['passion_ab'],$rec['passion_ct'] ); ?>ã€€
+		ç”Ÿå‘½ï¼š<?php echo sprintf( "%d/%d",$rec['life_ab'],$rec['life_ct'] ); ?>ã€€
+		å¤–ç•Œï¼š<?php echo sprintf( "%d/%d",$rec['mundane_ab'],$rec['mundane_ct'] ); ?></SPAN><br>
+		ï¼ˆCombatSpeedï¼š<?php echo sprintf( "%d", $rec['combatspeed'] ); ?>ï¼ŒActionRankï¼š<?php echo sprintf( "%d", $rec['actionrank'] ); ?>ï¼‰<br>
 		Category: <?php
 		for( $w = 0;($p < $cateList['num'])&&($cateList[$w]['id'] != $rec['category']);$w++ );
 		if( $w < $cateList['num'] ) echo htmlspecialchars( $cateList[$w]['name'] ); else echo "unknown";
@@ -163,7 +163,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>[Á°¥Ú¡¼¥¸]</b>¡¡<b>¢ã</b>¡¡
+	<b>[å‰ãƒšãƒ¼ã‚¸]</b>ã€€<b>â‰ª</b>ã€€
 	<?php if( $CONT_PAGE > 1 ) echo "</a>"; ?>
 	</td>
 	<td align="center">
@@ -181,7 +181,7 @@ if( $CONT_DATA != NULL ) {
 		echo "\">";
 	}
 	?>
-	<b>¢ä</b>¡¡<b>[¼¡¥Ú¡¼¥¸]</b>
+	<b>â‰«</b>ã€€<b>[æ¬¡ãƒšãƒ¼ã‚¸]</b>
 	<?php if( $CONT_PAGE < $page_max ) echo "</a>"; ?>
 	</td>
 </tr>
@@ -192,12 +192,12 @@ if( $CONT_DATA != NULL ) {
 }
 else {
 	echo "<center>";
-	echo htmlspecialchars( "¥­¥ã¥é¥¯¥¿¤¬ÅÐÏ¿¤µ¤ì¤Æ¤¤¤Þ¤»¤ó¡£\n" );
+	echo htmlspecialchars( "ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãŒç™»éŒ²ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚\n" );
 	echo "</center>\n";
 }
 ?>
 <?php
-// °ìÈÌµ»Ç½¤«¤é¡¢¥³¥Íµ»Ç½¤È¼Ò²ñµ»Ç½¤òÊ¬Î¥¤¹¤ë¡£
+// ä¸€èˆ¬æŠ€èƒ½ã‹ã‚‰ã€ã‚³ãƒæŠ€èƒ½ã¨ç¤¾ä¼šæŠ€èƒ½ã‚’åˆ†é›¢ã™ã‚‹ã€‚
 function	socieskill_split( $skill )
 {
 	$w = split( "\n",$skill );
@@ -205,8 +205,8 @@ function	socieskill_split( $skill )
 	$socie  = "";
 	$f = 0;
 	foreach( $w as $wl ) {
-		if( strpos( $wl,"¥³¥Í" ) != FALSE ) $f = 1;
-		else if( strpos( $wl,"¼Ò²ñ" ) != FALSE ) $f = 1;
+		if( strpos( $wl,"ã‚³ãƒ" ) != FALSE ) $f = 1;
+		else if( strpos( $wl,"ç¤¾ä¼š" ) != FALSE ) $f = 1;
 
 		if( $f == 0 ) $normal .= $wl . "\n"; else $socie .= $wl . "\n";
 	}
