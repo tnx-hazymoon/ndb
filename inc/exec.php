@@ -327,8 +327,8 @@ if( db_open() == TRUE ) {
 			$sql = "select * from " . $ndbDB['tbl'] . " " . $wh;
 			$sql .= ";";
 
-			$res = sqlite_query( $dbID, $sql );
-			$chr_num = sqlite_num_rows( $res );
+			$res = $dbID->query( $sql );
+			$chr_num = num_rows( $res );
 
 			$page_max = (int)(($chr_num + ($listMaxPerPage - 1)) / $listMaxPerPage);
 
@@ -343,11 +343,11 @@ if( db_open() == TRUE ) {
 				else                 $sql .= sprintf( " limit %d",$listMaxPerPage );
 				$sql .= ";";
 
-				$res = sqlite_query( $dbID, $sql );
-				$list_num = sqlite_num_rows( $res );
+				$res = $dbID->query( $sql );
+				$list_num = num_rows( $res );
 
 				for( $p = 0;$p < $list_num;$p++ ) {
-					$rec = sqlite_fetch_array( $res );
+					$rec = $res->fetchArray();
 				//	$rec = char_copy( $dbrec );
 
 					$CONT_DATA[] = $rec;
@@ -365,8 +365,8 @@ if( db_open() == TRUE ) {
 			$sql = "select * from " . $ndbDB['tbl'] . " " . $wh;
 			$sql .= ";";
 
-			$res = sqlite_query( $dbID, $sql );
-			$chr_num = sqlite_num_rows( $res );
+			$res = $dbID->query( $sql );
+			$chr_num = num_rows( $res );
 
 			$page_max = (int)(($chr_num + ($abstractMaxPerPage - 1)) / $abstractMaxPerPage);
 
@@ -381,11 +381,11 @@ if( db_open() == TRUE ) {
 				else                 $sql .= sprintf( " limit %d",$listMaxPerPage );
 				$sql .= ";";
 
-				$res = sqlite_query( $dbID, $sql );
-				$list_num = sqlite_num_rows( $res );
+				$res = $dbID->query( $sql );
+				$list_num = num_rows( $res );
 
 				for( $p = 0;$p < $list_num;$p++ ) {
-					$rec = sqlite_fetch_array( $res );
+					$rec = $res->fetchArray();
 				//	$rec = char_copy( $dbrec );
 
 					$CONT_DATA[] = $rec;

@@ -79,7 +79,7 @@ function db_open()
 	global	$ndbDB;
 
 	// データベースへの接続
-	if( $dbID = sqlite_open( $ndbDB['file'] ) ) {
+	if( $dbID = new SQLite3( $ndbDB['file'] ) ) {
 //		create_table();
 		return TRUE;
 	}
@@ -99,7 +99,7 @@ function db_close()
 {
 	global	$dbID;
 
-	sqlite_close( $dbID );
+	$dbID->close();
 	return TRUE;
 }
 
@@ -261,17 +261,17 @@ function form2find(
 	}
 	if( $form['player'] != "" ) {
 		if( $f == 0 ) $wh .= " and ";
-		$wh .= "( player like '%" . sqlite_escape_string( $form['player'] ) . "%' )";
+		$wh .= "( player like '%" . SQLite3::escapeString( $form['player'] ) . "%' )";
 		$f = 0;
 	}
 	if( $form['keyword'] != "" ) {
 		if( $f == 0 ) $wh .= " and ";
-		$wh .= "( (profile like '%" . sqlite_escape_string( $form['keyword'] ) . "%') or (comment like '%" . sqlite_escape_string( $form['keyword'] ) . "%') or (name like '%" . sqlite_escape_string( $form['keyword'] ) . "%') or (post like '%" . sqlite_escape_string( $form['keyword'] ) . "%') )";
+		$wh .= "( (profile like '%" . SQLite3::escapeString( $form['keyword'] ) . "%') or (comment like '%" . SQLite3::escapeString( $form['keyword'] ) . "%') or (name like '%" . SQLite3::escapeString( $form['keyword'] ) . "%') or (post like '%" . SQLite3::escapeString( $form['keyword'] ) . "%') )";
 		$f = 0;
 	}
 	if( $form['category'] != "" && $form['category'] != "all" ) {
 		if( $f == 0 ) $wh .= " and ";
-		$wh .= "( category like '" . sqlite_escape_string( $form['category'] ) . "%' )";
+		$wh .= "( category like '" . SQLite3::escapeString( $form['category'] ) . "%' )";
 		$f = 0;
 	}
 
@@ -661,10 +661,10 @@ function char_read(
 	$que = "select * from " . $ndbDB['tbl'];
 	$que = $que . " where";
 	$que = $que . " cid=" . sprintf( "%d",$cid ) . ";";
-	$result = sqlite_query( $dbID, $que );
+	$result = $dbID->query( $que );
 
-	if( sqlite_num_rows( $result ) > 0 ) {
-		if( $rec = sqlite_fetch_array( $result ) ) {
+	if( num_rows( $result ) > 0 ) {
+		if( $rec = $result->fetchArray() ) {
 //			if( stripslashes( $record['cid'] ) == $cid ) {
 
 				$data = char_copy( $rec );
@@ -694,14 +694,14 @@ function char_regist(
 	$now = date( "Y-m-d H:i:s",time() );
 
 	$sql = "insert into " . $ndbDB['tbl'] . " values ( NULL,";
-	$sql .= " '" . sqlite_escape_string( $data['player'] ) . "'";			// プレイヤー
-	$sql .= " ,'" . sqlite_escape_string( $pass ) . "'";					// パスワード
+	$sql .= " '" . SQLite3::escapeString( $data['player'] ) . "'";			// プレイヤー
+	$sql .= " ,'" . SQLite3::escapeString( $pass ) . "'";					// パスワード
 	$sql .= " ,'" . $now . "'";									// 登録日
 	$sql .= " ,'" . $now . "'";									// 最終更新日
-	$sql .= " ,'" . sqlite_escape_string( $data['name'] ) . "'";			// 名前（ハンドル含む）
-	$sql .= " ,'" . sqlite_escape_string( $data['category'] ) . "'";		// カテゴリID
+	$sql .= " ,'" . SQLite3::escapeString( $data['name'] ) . "'";			// 名前（ハンドル含む）
+	$sql .= " ,'" . SQLite3::escapeString( $data['category'] ) . "'";		// カテゴリID
 	$sql .= " ,''";												// カテゴリタグ
-	$sql .= " ,'" . sqlite_escape_string( $data['post'] ) . "'";			// 職業/所属
+	$sql .= " ,'" . SQLite3::escapeString( $data['post'] ) . "'";			// 職業/所属
 	$sql .= " ," . sprintf( "%d",$data['style1'] );				// スタイル１
 	$sql .= " ," . sprintf( "%d",$data['style2'] );				// スタイル２
 	$sql .= " ," . sprintf( "%d",$data['style3'] );				// スタイル３
@@ -717,28 +717,28 @@ function char_regist(
 	$sql .= " ," . sprintf( "%d",$data['mundane_ct'] );			// 外界制御値
 	$sql .= " ," . sprintf( "%d",$data['combatspeed'] );		// CombatSpeed
 	$sql .= " ," . sprintf( "%d",$data['actionrank'] );			// ActionRank
-	$sql .= " ,'" . sqlite_escape_string( $data['lifepass'] ) . "'";		// ライフパス
-	$sql .= " ,'" . sqlite_escape_string( $data['citizen'] ) . "'";		// 市民ID
-	$sql .= " ,'" . sqlite_escape_string( $data['age'] ) . "'";			// 年齢
-	$sql .= " ,'" . sqlite_escape_string( $data['jender'] ) . "'";		// 性別
-	$sql .= " ,'" . sqlite_escape_string( $data['height'] ) . "'";		// 身長
-	$sql .= " ,'" . sqlite_escape_string( $data['weight'] ) . "'";		// 体重
-	$sql .= " ,'" . sqlite_escape_string( $data['eyes'] ) . "'";			// 瞳の色
-	$sql .= " ,'" . sqlite_escape_string( $data['hair'] ) . "'";			// 髪の色
-	$sql .= " ,'" . sqlite_escape_string( $data['skin'] ) . "'";			// 肌の色
-	$sql .= " ,'" . sqlite_escape_string( $data['birthday'] ) . "'";		// 誕生日
-	$sql .= " ,'" . sqlite_escape_string( $data['photo'] ) . "'";			// 
-	$sql .= " ,'" . sqlite_escape_string( $data['exp'] ) . "'";			// 消費経験点
-	$sql .= " ,'" . sqlite_escape_string( $data['pub_skill'] ) . "'";		// 一般技能
-	$sql .= " ,'" . sqlite_escape_string( $data['spc_skill'] ) . "'";		// 特殊技能
-	$sql .= " ,'" . sqlite_escape_string( $data['items'] ) . "'";			// 装備
-	$sql .= " ,'" . sqlite_escape_string( $data['profile'] ) . "'";		// 略歴
-	$sql .= " ,'" . sqlite_escape_string( $data['comment'] ) . "'";		// コメント
+	$sql .= " ,'" . SQLite3::escapeString( $data['lifepass'] ) . "'";		// ライフパス
+	$sql .= " ,'" . SQLite3::escapeString( $data['citizen'] ) . "'";		// 市民ID
+	$sql .= " ,'" . SQLite3::escapeString( $data['age'] ) . "'";			// 年齢
+	$sql .= " ,'" . SQLite3::escapeString( $data['jender'] ) . "'";		// 性別
+	$sql .= " ,'" . SQLite3::escapeString( $data['height'] ) . "'";		// 身長
+	$sql .= " ,'" . SQLite3::escapeString( $data['weight'] ) . "'";		// 体重
+	$sql .= " ,'" . SQLite3::escapeString( $data['eyes'] ) . "'";			// 瞳の色
+	$sql .= " ,'" . SQLite3::escapeString( $data['hair'] ) . "'";			// 髪の色
+	$sql .= " ,'" . SQLite3::escapeString( $data['skin'] ) . "'";			// 肌の色
+	$sql .= " ,'" . SQLite3::escapeString( $data['birthday'] ) . "'";		// 誕生日
+	$sql .= " ,'" . SQLite3::escapeString( $data['photo'] ) . "'";			// 
+	$sql .= " ,'" . SQLite3::escapeString( $data['exp'] ) . "'";			// 消費経験点
+	$sql .= " ,'" . SQLite3::escapeString( $data['pub_skill'] ) . "'";		// 一般技能
+	$sql .= " ,'" . SQLite3::escapeString( $data['spc_skill'] ) . "'";		// 特殊技能
+	$sql .= " ,'" . SQLite3::escapeString( $data['items'] ) . "'";			// 装備
+	$sql .= " ,'" . SQLite3::escapeString( $data['profile'] ) . "'";		// 略歴
+	$sql .= " ,'" . SQLite3::escapeString( $data['comment'] ) . "'";		// コメント
 	$sql .= " );";
 
 //	dbgLog( $sql );
 
-	if( $res = sqlite_query( $dbID, $sql ) == TRUE ) {
+	if( $res = $dbID->query( $sql ) == TRUE ) {
 //		dbgLog( "char_regist: Ok" );
 	}
 	else {
@@ -764,11 +764,11 @@ function char_update(
 	$now = date( "Y-m-d H:i:s",time() );
 
 	$sql = "update " . $ndbDB['tbl'] . " set";
-	$sql .= " player='" .       sqlite_escape_string( $data['player'] ) . "'";
+	$sql .= " player='" .       SQLite3::escapeString( $data['player'] ) . "'";
 	$sql .= ",updtime='" . $now . "'";
-	$sql .= ",name='" .      sqlite_escape_string( $data['name'] ) . "'";
-	$sql .= ",category='" .  sqlite_escape_string( $data['category'] ) . "'";
-	$sql .= ",post='" .      sqlite_escape_string( $data['post'] ) . "'";
+	$sql .= ",name='" .      SQLite3::escapeString( $data['name'] ) . "'";
+	$sql .= ",category='" .  SQLite3::escapeString( $data['category'] ) . "'";
+	$sql .= ",post='" .      SQLite3::escapeString( $data['post'] ) . "'";
 	$sql .= ",style1=" .      sprintf( "%d",$data['style1'] );
 	$sql .= ",style2=" .      sprintf( "%d",$data['style2'] );
 	$sql .= ",style3=" .      sprintf( "%d",$data['style3'] );
@@ -784,28 +784,28 @@ function char_update(
 	$sql .= ",mundane_ct=" .  sprintf( "%d",$data['mundane_ct'] );
 	$sql .= ",combatspeed=" . sprintf( "%d",$data['combatspeed'] );
 	$sql .= ",actionrank=" .  sprintf( "%d",$data['actionrank'] );
-	$sql .= ",lifepass='" .  sqlite_escape_string( $data['lifepass'] ) . "'";
-	$sql .= ",citizen='" .   sqlite_escape_string( $data['citizen'] ) . "'";
-	$sql .= ",age='" .       sqlite_escape_string( $data['age'] ) . "'";
-	$sql .= ",jender='" .    sqlite_escape_string( $data['jender'] ) . "'";
-	$sql .= ",height='" .    sqlite_escape_string( $data['height'] ) . "'";
-	$sql .= ",weight='" .    sqlite_escape_string( $data['weight'] ) . "'";
-	$sql .= ",eyes='" .      sqlite_escape_string( $data['eyes'] ) . "'";
-	$sql .= ",hair='" .      sqlite_escape_string( $data['hair'] ) . "'";
-	$sql .= ",skin='" .      sqlite_escape_string( $data['skin'] ) . "'";
-	$sql .= ",birthday='" .  sqlite_escape_string( $data['birthday'] ) . "'";
-	$sql .= ",photo='" .     sqlite_escape_string( $data['photo'] ) . "'";
-	$sql .= ",exp='" .       sqlite_escape_string( $data['exp'] ) . "'";
-	$sql .= ",pub_skill='" . sqlite_escape_string( $data['pub_skill'] ) . "'";
-	$sql .= ",spc_skill='" . sqlite_escape_string( $data['spc_skill'] ) . "'";
-	$sql .= ",items='" .     sqlite_escape_string( $data['items'] ) . "'";
-	$sql .= ",profile='" .   sqlite_escape_string( $data['profile'] ) . "'";
-	$sql .= ",comment='" .   sqlite_escape_string( $data['comment'] ) . "'";
+	$sql .= ",lifepass='" .  SQLite3::escapeString( $data['lifepass'] ) . "'";
+	$sql .= ",citizen='" .   SQLite3::escapeString( $data['citizen'] ) . "'";
+	$sql .= ",age='" .       SQLite3::escapeString( $data['age'] ) . "'";
+	$sql .= ",jender='" .    SQLite3::escapeString( $data['jender'] ) . "'";
+	$sql .= ",height='" .    SQLite3::escapeString( $data['height'] ) . "'";
+	$sql .= ",weight='" .    SQLite3::escapeString( $data['weight'] ) . "'";
+	$sql .= ",eyes='" .      SQLite3::escapeString( $data['eyes'] ) . "'";
+	$sql .= ",hair='" .      SQLite3::escapeString( $data['hair'] ) . "'";
+	$sql .= ",skin='" .      SQLite3::escapeString( $data['skin'] ) . "'";
+	$sql .= ",birthday='" .  SQLite3::escapeString( $data['birthday'] ) . "'";
+	$sql .= ",photo='" .     SQLite3::escapeString( $data['photo'] ) . "'";
+	$sql .= ",exp='" .       SQLite3::escapeString( $data['exp'] ) . "'";
+	$sql .= ",pub_skill='" . SQLite3::escapeString( $data['pub_skill'] ) . "'";
+	$sql .= ",spc_skill='" . SQLite3::escapeString( $data['spc_skill'] ) . "'";
+	$sql .= ",items='" .     SQLite3::escapeString( $data['items'] ) . "'";
+	$sql .= ",profile='" .   SQLite3::escapeString( $data['profile'] ) . "'";
+	$sql .= ",comment='" .   SQLite3::escapeString( $data['comment'] ) . "'";
 	$sql .= " where cid=" .   sprintf( "%d",$cid ) . ";";
 
 //	dbgLog( $sql );
 
-	if( $res = sqlite_query( $dbID, $sql ) == TRUE ) {
+	if( $res = $dbID->query( $sql ) == TRUE ) {
 //		dbgLog( "char_update: Ok" );
 	}
 	else {
@@ -831,10 +831,10 @@ function char_chpass(
 	$now = date( "Y-m-d H:i:s",time() );
 
 	$sql = "update " . $ndbDB['tbl'] . " set";
-	$sql .= " passwd='" . sqlite_escape_string( $pass ) . "'";
+	$sql .= " passwd='" . SQLite3::escapeString( $pass ) . "'";
 	$sql .= " where cid=" . sprintf( "%d",$cid ) . ";";
 
-	$res = sqlite_query( $dbID, $sql );
+	$res = $dbID->query( $sql );
 }
 
 /*%FNC--------------------------------
@@ -854,10 +854,10 @@ function char_passchk(
 	$que = "select * from " . $ndbDB['tbl'];
 	$que = $que . " where";
 	$que = $que . " cid=" . sprintf( "%d",$cid ) . ";";
-	$result = sqlite_query( $dbID, $que );
+	$result = $dbID->query( $que );
 
-	if( sqlite_num_rows( $result ) > 0 ) {
-		if( $record = sqlite_fetch_array( $result ) ) {
+	if( num_rows( $result ) > 0 ) {
+		if( $record = $result->fetchArray() ) {
 			if( $record['cid'] == $cid
 			 && $record['passwd'] == $pass ) return TRUE;
 		}
@@ -882,7 +882,7 @@ function char_delete(
 	$que = "delete from " . $ndbDB['tbl'];
 	$que = $que . " where";
 	$que = $que . " cid=" . sprintf( "%d",$cid ) . ";";
-	$result = sqlite_query( $dbID, $que );
+	$result = $dbID->query( $que );
 
 	return TRUE;
 	
@@ -913,9 +913,28 @@ function create_table()
 	}
 	$sql .= " );";
 
-	$result = sqlite_query( $dbID, $sql );
+	$result = $dbID->query( $sql );
 
 	return TRUE;
+}
+
+/*%FNC--------------------------------
+ Function	
+ Process	
+ Result		
+ Memo		
+ ------------------------------------*/
+function num_rows(
+	$result
+)
+{
+	$num = 0;
+	while ( $result->fetchArray() ) {
+		$num++;
+	}
+	$result->reset();
+
+	return $num;
 }
 
 ?>
