@@ -1,0 +1,81 @@
+TD {
+	PADDING-RIGHT: 1pt;
+	PADDING-LEFT: 1pt;
+	FONT-SIZE: 9pt;
+	PADDING-BOTTOM: 1pt;
+	COLOR: #000000;
+	LINE-HEIGHT: 12pt;
+	PADDING-TOP: 1pt;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯';
+	BACKGROUND-COLOR: #d0e8d0
+}
+
+TH {
+	PADDING-RIGHT: 1pt;
+	PADDING-LEFT: 1pt;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	PADDING-BOTTOM: 1pt;
+	COLOR: #000000;
+	LINE-HEIGHT: 13pt;
+	PADDING-TOP: 1pt;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯';
+	BACKGROUND-COLOR: #90c090;
+	TEXT-ALIGN: center
+}
+
+A:link {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #006000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+A:visited {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: #006000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+.post {
+	FONT-SIZE: 8pt;
+	COLOR: #000000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+.date {
+	FONT-SIZE: 9pt;
+	COLOR: #999999;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+.name {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12pt;
+	COLOR: #000000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+.data {
+	FONT-SIZE: 9pt;
+	LINE-HEIGHT: 10pt;
+	COLOR: #000000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+.novastyle {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12pt;
+	LINE-HEIGHT: 13pt;
+	COLOR: #000000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
+
+.ability {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	LINE-HEIGHT: 11pt;
+	COLOR: #000000;
+	FONT-FAMILY: '£Í£Ó £Ð¥´¥·¥Ã¥¯'
+}
